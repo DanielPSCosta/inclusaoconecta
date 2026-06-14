@@ -9,7 +9,7 @@
 
     <link rel="icon" type="image/png" href="../assets/img/inclusao_conecta_separado.png">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_home.css">
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -58,7 +58,7 @@
                         <div class="container mt-4">
                             <div id="pdf">
                                 <button onclick="exportarPDF()" class="btn btn-danger">
-                                    Exportar PDF
+                                    <i class="bi bi-file-earmark-spreadsheet"></i> PDF
                                 </button>
                             </div>
 
@@ -66,8 +66,8 @@
 
                             <table id="table" data-toggle="table" data-pagination="true" data-page-size="5"
                                 data-locale="pt-BR" data-toolbar="#pdf" data-page-list="[10,25,50,100, All]"
-                                data-search="true" data-show-columns="true" data-show-refresh="true"
-                                data-show-toggle="true" data-show-export="true" data-export-data-type="all"
+                                data-search="true" data-show-columns="true" 
+                                data-show-export="true" data-export-data-type="all"
                                 data-export-types='["pdf","xlsx","csv","excel","txt"]' class="table">
                                 <thead class="thead-dark">
                                     <tr>
