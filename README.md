@@ -1,85 +1,73 @@
 # Inclusão Conecta
 
 <p align="center">
-  <strong>Conectando pessoas, oportunidades e inclusão através da tecnologia.</strong>
+  <img src="./assets/logo.png" alt="Logo Inclusão Conecta" width="150">
+</p>
+
+<h1 align="center">Inclusão Conecta</h1>
+
+<p align="center">
+  Plataforma web desenvolvida para promover inclusão, acessibilidade e conexão entre pessoas por meio da tecnologia.
 </p>
 
 ---
 
 ## 📖 Sobre o Projeto
 
-O **Inclusão Conecta** é uma plataforma desenvolvida para promover acessibilidade, inclusão e conexão entre usuários, instituições e oportunidades, oferecendo uma experiência digital intuitiva e acessível.
+O **Inclusão Conecta** é uma aplicação web desenvolvida com foco em acessibilidade e inclusão digital. O projeto busca oferecer uma experiência intuitiva, responsiva e acessível para diferentes perfis de usuários, utilizando tecnologias web modernas e de fácil manutenção.
 
-O projeto tem como objetivo reduzir barreiras de acesso à informação e facilitar a interação entre diferentes públicos por meio de recursos tecnológicos modernos.
-
----
-
-## ✨ Funcionalidades
-
-* Cadastro e autenticação de usuários
-* Gerenciamento de perfis
-* Busca e visualização de oportunidades
-* Interface responsiva
-* Recursos de acessibilidade
-* Painel administrativo
-* Integração com APIs externas
+O sistema foi construído utilizando apenas tecnologias front-end, proporcionando uma navegação simples e eficiente em diferentes dispositivos.
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
-### Frontend
-
 * HTML5
 * CSS3
-* JavaScript
-* React
+* JavaScript 
+* Bootstrap 5
 
-### Backend
+---
 
-* Node.js
-* Express
+## ✨ Funcionalidades
 
-### Banco de Dados
-
-* PostgreSQL
-
-### Ferramentas
-
-* Git
-* GitHub
-* Docker
+* Interface responsiva para dispositivos móveis e desktops
+* Navegação intuitiva
+* Layout moderno utilizando Bootstrap
+* Componentes interativos com JavaScript
+* Estrutura otimizada para acessibilidade
+* Fácil manutenção e expansão
 
 ---
 
 ## 📂 Estrutura do Projeto
 
-```bash
+```text
 inclusaoconecta/
 │
-├── frontend/
-├── backend/
-├── docs/
-├── public/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── services/
-│   └── assets/
+├── index.html
+├── css/
+│   └── style.css
 │
-├── package.json
+├── js/
+│   └── script.js
+│
+├── assets/
+│   ├── images/
+│   └── icons/
+│
 └── README.md
 ```
 
-## ⚙️ Instalação
+---
 
-### Pré-requisitos
+## ⚙️ Como Executar o Projeto
 
-* Node.js 18+
-* npm ou yarn
-* Git
+### Opção 1 — Abrir diretamente
 
-### Clonando o repositório
+Basta baixar ou clonar o repositório e abrir o arquivo `index.html` em qualquer navegador moderno.
+
+### Opção 2 — Clonar o repositório
 
 ```bash
 git clone https://github.com/DanielPSCosta/inclusaoconecta.git
@@ -89,92 +77,67 @@ git clone https://github.com/DanielPSCosta/inclusaoconecta.git
 cd inclusaoconecta
 ```
 
-### Instalando dependências
-
-```bash
-npm install
-```
-
-### Executando o projeto
-
-```bash
-npm run dev
-```
-
-O sistema estará disponível em:
-
-```bash
-http://localhost:3000
-```
+Após isso, abra o arquivo `index.html` no navegador.
 
 ---
 
-## 🔧 Variáveis de Ambiente
+## 🌐 Demonstração
 
-Crie um arquivo `.env` na raiz do projeto:
+Caso o projeto esteja publicado, adicione o link abaixo:
 
-```env
-DATABASE_URL=
-JWT_SECRET=
-API_URL=
+```text
+[https://seu-site.com](https://inclusaoconecta.onrender.com/)
 ```
 
 ---
 
 ## ♿ Acessibilidade
 
-O projeto segue boas práticas de acessibilidade digital:
+O projeto foi desenvolvido considerando boas práticas de acessibilidade:
 
-* Navegação por teclado
+* Estrutura HTML semântica
+* Navegação simplificada
 * Compatibilidade com leitores de tela
-* Contraste adequado de cores
-* Estrutura semântica HTML
-* Responsividade para diferentes dispositivos
+* Layout responsivo
+* Contraste adequado para melhor legibilidade
 
 ---
 
-## 🧪 Testes
+## 📱 Responsividade
 
-Para executar os testes:
+A interface foi construída utilizando o Bootstrap, garantindo adaptação para:
 
-```bash
-npm test
-```
+* Smartphones
+* Tablets
+* Notebooks
+* Monitores desktop
 
 ---
 
-## 🤝 Como Contribuir
+## 🤝 Contribuições
 
-1. Faça um fork do projeto
+Contribuições são bem-vindas!
+
+1. Faça um Fork do projeto
 2. Crie uma branch para sua feature
 
 ```bash
-git checkout -b feature/minha-feature
+git checkout -b minha-feature
 ```
 
-3. Faça commit das alterações
+3. Commit suas alterações
 
 ```bash
-git commit -m "feat: adiciona nova funcionalidade"
+git commit -m "feat: nova funcionalidade"
 ```
 
-4. Envie para sua branch
+4. Envie para o repositório remoto
 
 ```bash
-git push origin feature/minha-feature
+git push origin minha-feature
 ```
 
 5. Abra um Pull Request
-
----
-
-## 📌 Roadmap
-
-* [ ] Melhorias de acessibilidade
-* [ ] Aplicativo mobile
-* [ ] Integração com serviços públicos
-* [ ] Sistema de notificações
-* [ ] Dashboard analítico
 
 ---
 
@@ -188,10 +151,10 @@ GitHub: https://github.com/DanielPSCosta
 
 ## 📄 Licença
 
-Este projeto está licenciado sob a licença MIT.
+Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais informações.
 
 ---
 
 <p align="center">
-  Desenvolvido com ❤️ para promover inclusão e acessibilidade.
+  Desenvolvido para promover inclusão, acessibilidade e conexão digital.
 </p>
