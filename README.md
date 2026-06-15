@@ -86,7 +86,7 @@ Após isso, abra o arquivo `index.html` no navegador.
 Caso o projeto esteja publicado, adicione o link abaixo:
 
 ```text
-[https://seu-site.com](https://inclusaoconecta.onrender.com/)
+https://inclusaoconecta.onrender.com
 ```
 
 ---
