@@ -216,25 +216,17 @@
 
 
         <!-- Botão para instalar app que aparece no inicio da tela -->
-        <div id="installCard" class="card shadow position-fixed bottom-0 end-0 m-3 d-none"
-            style="width: 320px; z-index: 9999;">
+        <div class="toast position-fixed bottom-0 end-0 m-3" id="installToast">
+            <div class="toast-header">
+                <strong class="me-auto">Inclusão Conecta</strong>
+            </div>
 
-            <div class="card-body">
-                <h6>📱 Instale o aplicativo</h6>
+            <div class="toast-body">
+                Instale o aplicativo em seu dispositivo.
 
-                <p class="small mb-3">
-                    Acesse mais rápido diretamente da tela inicial.
-                </p>
-
-                <div class="d-flex gap-2">
-                    <button id="btnInstalar" class="btn btn-primary btn-sm">
-                        Instalar
-                    </button>
-
-                    <button id="btnFechar" class="btn btn-outline-secondary btn-sm">
-                        Depois
-                    </button>
-                </div>
+                <button id="btnInstalar" class="btn btn-primary btn-sm mt-2">
+                    Instalar
+                </button>
             </div>
         </div>
 

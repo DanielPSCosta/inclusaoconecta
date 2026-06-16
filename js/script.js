@@ -44,15 +44,22 @@ function aplicarFonte() {
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
 
+    if (localStorage.getItem('app_instalado') === 'true') {
+        return;
+    }
+
+    e.preventDefault();
     deferredPrompt = e;
 
-    const modal = new bootstrap.Modal(
-        document.getElementById('installModal')
+    const toast = new bootstrap.Toast(
+        document.getElementById('installToast'),
+        {
+            autohide: false
+        }
     );
 
-    modal.show();
+    toast.show();
 });
 
 document.getElementById('btnInstalar').addEventListener('click', async () => {
@@ -63,14 +70,15 @@ document.getElementById('btnInstalar').addEventListener('click', async () => {
 
     const { outcome } = await deferredPrompt.userChoice;
 
-    console.log(`Resultado da instalação: ${outcome}`);
+    console.log('Resultado:', outcome);
 
     if (outcome === 'accepted') {
-        const modalElement = document.getElementById('installModal');
-        const modal = bootstrap.Modal.getInstance(modalElement);
 
-        if (modal) {
-            modal.hide();
+        const toastElement = document.getElementById('installToast');
+        const toast = bootstrap.Toast.getInstance(toastElement);
+
+        if (toast) {
+            toast.hide();
         }
     }
 
@@ -79,14 +87,14 @@ document.getElementById('btnInstalar').addEventListener('click', async () => {
 
 window.addEventListener('appinstalled', () => {
 
-    console.log('Aplicativo instalado com sucesso!');
+    localStorage.setItem('app_instalado', 'true');
 
-    const modalElement = document.getElementById('installModal');
-    const modal = bootstrap.Modal.getInstance(modalElement);
+    const toastElement = document.getElementById('installToast');
+    const toast = bootstrap.Toast.getInstance(toastElement);
 
-    if (modal) {
-        modal.hide();
+    if (toast) {
+        toast.hide();
     }
 
-    deferredPrompt = null;
+    console.log('Aplicativo instalado!');
 });
