@@ -4,6 +4,9 @@ $arquivo = '../js/dados.js';
 
 $dados = json_decode(file_get_contents($arquivo), true);
 
+var_dump($dados);
+exit;
+
 if (!$dados) {
     $dados = [];
 }
