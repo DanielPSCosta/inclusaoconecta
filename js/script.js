@@ -107,12 +107,12 @@ const isStandalone =
     window.navigator.standalone;
 
 // iPhone
-// if (isIOS && !isStandalone) {
+if (isIOS && !isStandalone) {
 
-//     document.getElementById('iosInstall').style.display = 'block';
+    document.getElementById('iosInstall').style.display = 'block';
 
-//     toast.show();
-// }
+    toast.show();
+}
 
 // Android / Chrome
 window.addEventListener('beforeinstallprompt', (e) => {
