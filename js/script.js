@@ -26,3 +26,19 @@ function aplicarFonte() {
     document.documentElement.style.fontSize = tamanho + 'px';
     localStorage.setItem('fonte', tamanho);
 }
+
+
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+
+    new bootstrap.Modal(
+        document.getElementById('installModal')
+    ).show();
+});
+
+document.getElementById('btnInstalar').addEventListener('click', async () => {
+    deferredPrompt.prompt();
+});
