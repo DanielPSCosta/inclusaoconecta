@@ -52,14 +52,9 @@ window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
     deferredPrompt = e;
 
-    const toast = new bootstrap.Toast(
-        document.getElementById('installToast'),
-        {
-            autohide: false
-        }
-    );
-
-    toast.show();
+    document
+        .getElementById('installBanner')
+        .classList.remove('d-none');
 });
 
 document.getElementById('btnInstalar').addEventListener('click', async () => {
@@ -70,31 +65,27 @@ document.getElementById('btnInstalar').addEventListener('click', async () => {
 
     const { outcome } = await deferredPrompt.userChoice;
 
-    console.log('Resultado:', outcome);
-
     if (outcome === 'accepted') {
-
-        const toastElement = document.getElementById('installToast');
-        const toast = bootstrap.Toast.getInstance(toastElement);
-
-        if (toast) {
-            toast.hide();
-        }
+        document
+            .getElementById('installBanner')
+            .classList.add('d-none');
     }
 
     deferredPrompt = null;
+});
+
+document.getElementById('btnFecharBanner').addEventListener('click', () => {
+
+    document
+        .getElementById('installBanner')
+        .classList.add('d-none');
 });
 
 window.addEventListener('appinstalled', () => {
 
     localStorage.setItem('app_instalado', 'true');
 
-    const toastElement = document.getElementById('installToast');
-    const toast = bootstrap.Toast.getInstance(toastElement);
-
-    if (toast) {
-        toast.hide();
-    }
-
-    console.log('Aplicativo instalado!');
+    document
+        .getElementById('installBanner')
+        .classList.add('d-none');
 });
