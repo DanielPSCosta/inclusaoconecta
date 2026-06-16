@@ -1,6 +1,6 @@
 <?php
 
-$arquivo = '../js/dados.json';
+$arquivo = '../js/dados.js';
 
 $dados = json_decode(file_get_contents($arquivo), true);
 

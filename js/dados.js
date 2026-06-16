@@ -158,7 +158,7 @@ function cadastrar_form() {
 
 
     $.ajax({
-        url: 'https://inclusaoconecta.onrender.com//PHP/form.php',
+        url: 'https://inclusaoconecta.onrender.com/PHP/form.php',
         type: 'POST',
         dataType: 'json',
         data: {
