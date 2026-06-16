@@ -1,4 +1,4 @@
-LAYOUT MELHORADO - VAP VUUP
+LAYOUT MELHORADO - INCLUSÃO CONECTA
 
 Arquivos principais alterados:
 - index.html
