@@ -28,17 +28,64 @@ function aplicarFonte() {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault();
+
     deferredPrompt = e;
 
-    new bootstrap.Modal(
+    const modal = new bootstrap.Modal(
         document.getElementById('installModal')
-    ).show();
+    );
+
+    modal.show();
 });
 
 document.getElementById('btnInstalar').addEventListener('click', async () => {
+
+    if (!deferredPrompt) return;
+
     deferredPrompt.prompt();
+
+    const { outcome } = await deferredPrompt.userChoice;
+
+    console.log(`Resultado da instalação: ${outcome}`);
+
+    if (outcome === 'accepted') {
+        const modalElement = document.getElementById('installModal');
+        const modal = bootstrap.Modal.getInstance(modalElement);
+
+        if (modal) {
+            modal.hide();
+        }
+    }
+
+    deferredPrompt = null;
+});
+
+window.addEventListener('appinstalled', () => {
+
+    console.log('Aplicativo instalado com sucesso!');
+
+    const modalElement = document.getElementById('installModal');
+    const modal = bootstrap.Modal.getInstance(modalElement);
+
+    if (modal) {
+        modal.hide();
+    }
+
+    deferredPrompt = null;
 });
