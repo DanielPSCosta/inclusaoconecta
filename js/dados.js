@@ -157,44 +157,59 @@ function cadastrar_form() {
     }
 
 
-    atendimentos.push({
-        servico,
-        categoria,
-        duracao,
-        atendente,
-        atendido
+    $.ajax({
+        url: 'https://inclusaoconecta.onrender.com//PHP/form.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {
+            atendente: $('#atendente').val(),
+            Atendido: $('#Atendido').val(),
+            servico_executado: $('#servico_executado').val(),
+            Duracao: $('#Duracao').val(),
+            categoria: $('#categoria').val()
+        },
+        success: function (retorno) {
+            console.log(retorno);
+
+            if (retorno.status) {
+                alert('Registro salvo com sucesso!');
+            }
+        },
+        error: function (erro) {
+            console.log(erro);
+        }
     });
 
+}
 
-    function abrir_login() {
-        // Captura o elemento input pelo ID
-        const meuLogin = document.getElementById('login');
+function abrir_login() {
+    // Captura o elemento input pelo ID
+    const meuLogin = document.getElementById('login');
 
-        // Pega o valor contido nele
-        const login = meuLogin.value;
-
-
-        // Captura o elemento input pelo ID
-        const minhasenha = document.getElementById('senha');
-
-        // Pega o valor contido nele
-        const senha = minhasenha.value;
+    // Pega o valor contido nele
+    const login = meuLogin.value;
 
 
+    // Captura o elemento input pelo ID
+    const minhasenha = document.getElementById('senha');
+
+    // Pega o valor contido nele
+    const senha = minhasenha.value;
 
 
-        if (login == 'Daniel' && senha == '123') {
-            window.location.href = "home.html";
-        } else {
 
 
-            Swal.fire({
-                title: 'Atenção!',
-                text: 'Favor incluir um login e senha válidos!',
-                icon: 'info',
-                confirmButtonText: 'Cool'
-            })
+    if (login == 'Daniel' && senha == '123') {
+        window.location.href = "home.html";
+    } else {
 
-        }
+
+        Swal.fire({
+            title: 'Atenção!',
+            text: 'Favor incluir um login e senha válidos!',
+            icon: 'info',
+            confirmButtonText: 'Cool'
+        })
+
     }
 }
