@@ -44,17 +44,17 @@ function aplicarFonte() {
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
-
-    if (localStorage.getItem('app_instalado') === 'true') {
-        return;
-    }
-
     e.preventDefault();
     deferredPrompt = e;
 
-    document
-        .getElementById('installBanner')
-        .classList.remove('d-none');
+    const toast = new bootstrap.Toast(
+        document.getElementById('installToast'),
+        {
+            autohide: false
+        }
+    );
+
+    toast.show();
 });
 
 document.getElementById('btnInstalar').addEventListener('click', async () => {
@@ -63,29 +63,31 @@ document.getElementById('btnInstalar').addEventListener('click', async () => {
 
     deferredPrompt.prompt();
 
-    const { outcome } = await deferredPrompt.userChoice;
-
-    if (outcome === 'accepted') {
-        document
-            .getElementById('installBanner')
-            .classList.add('d-none');
-    }
+    await deferredPrompt.userChoice;
 
     deferredPrompt = null;
 });
 
-document.getElementById('btnFecharBanner').addEventListener('click', () => {
+document.getElementById('btnFecharToast').addEventListener('click', () => {
 
-    document
-        .getElementById('installBanner')
-        .classList.add('d-none');
+    const toast = bootstrap.Toast.getInstance(
+        document.getElementById('installToast')
+    );
+
+    if (toast) {
+        toast.hide();
+    }
 });
 
 window.addEventListener('appinstalled', () => {
 
-    localStorage.setItem('app_instalado', 'true');
+    const toast = bootstrap.Toast.getInstance(
+        document.getElementById('installToast')
+    );
 
-    document
-        .getElementById('installBanner')
-        .classList.add('d-none');
+    if (toast) {
+        toast.hide();
+    }
+
+    localStorage.setItem('app_instalado', 'true');
 });
