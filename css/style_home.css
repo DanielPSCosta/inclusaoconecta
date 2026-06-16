@@ -505,7 +505,7 @@ textarea.form-control {
     transform: translateY(-4px) scale(1.03);
 }
 
-.logout{
+.logout {
     color: red;
 }
 
@@ -645,4 +645,10 @@ textarea.form-control {
     .h-custom {
         height: 100%;
     }
+}
+
+
+
+.tamanho_letra {
+    font-size: 90px;
 }
