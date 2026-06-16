@@ -215,21 +215,25 @@
 
 
 
+        <!-- Botão para instalar app que aparece no inicio da tela -->
+        <div id="installCard" class="card shadow position-fixed bottom-0 end-0 m-3 d-none"
+            style="width: 320px; z-index: 9999;">
 
-        <div class="modal fade" id="installModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5>Instalar Aplicativo</h5>
-                    </div>
-                    <div class="modal-body">
-                        Deseja instalar o Inclusão Conecta em seu celular?
-                    </div>
-                    <div class="modal-footer">
-                        <button id="btnInstalar" class="btn btn-primary">
-                            Instalar
-                        </button>
-                    </div>
+            <div class="card-body">
+                <h6>📱 Instale o aplicativo</h6>
+
+                <p class="small mb-3">
+                    Acesse mais rápido diretamente da tela inicial.
+                </p>
+
+                <div class="d-flex gap-2">
+                    <button id="btnInstalar" class="btn btn-primary btn-sm">
+                        Instalar
+                    </button>
+
+                    <button id="btnFechar" class="btn btn-outline-secondary btn-sm">
+                        Depois
+                    </button>
                 </div>
             </div>
         </div>

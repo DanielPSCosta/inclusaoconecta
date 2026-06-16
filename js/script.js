@@ -38,8 +38,9 @@ function aplicarFonte() {
 
 
 
-
-
+///////////////////////////////////////////////////////////
+// Botão para instalar app que aparece no inicio da tela //
+///////////////////////////////////////////////////////////
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
