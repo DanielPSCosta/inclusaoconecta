@@ -216,7 +216,7 @@
 
 
         <!-- Botão para instalar app que aparece no inicio da tela -->
-        <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-1" style="z-index: 9999;">
+        <!-- <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-1" style="z-index: 9999;">
             <div id="installToast" class="toast" role="alert">
                 <div class="toast-body d-flex align-items-center justify-content-between">
                     <span>📱 Instale o aplicativo</span>
@@ -229,6 +229,39 @@
                         <button type="button" class="btn-close ms-2" id="btnFecharToast">
                         </button>
                     </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-2" style="z-index: 9999;">
+            <div id="installToast" class="toast" role="alert">
+                <div class="toast-body">
+
+                    <div id="androidInstall" style="display: none;">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span>📱 Instale o aplicativo</span>
+
+                            <div>
+                                <button id="btnInstalar" class="btn btn-primary btn-sm">
+                                    Instalar
+                                </button>
+
+                                <button type="button" class="btn-close ms-2" id="btnFecharToast"></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="iosInstall" style="display: none;">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <small>
+                                📱 Toque em Compartilhar ⬆️ e depois em
+                                <strong>Adicionar à Tela de Início</strong>
+                            </small>
+
+                            <button type="button" class="btn-close ms-2" id="btnFecharToastIOS"></button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

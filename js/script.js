@@ -41,18 +41,91 @@ function aplicarFonte() {
 ///////////////////////////////////////////////////////////
 // Botão para instalar app que aparece no inicio da tela //
 ///////////////////////////////////////////////////////////
+// let deferredPrompt;
+
+// window.addEventListener('beforeinstallprompt', (e) => {
+//     e.preventDefault();
+//     deferredPrompt = e;
+
+//     const toast = new bootstrap.Toast(
+//         document.getElementById('installToast'),
+//         {
+//             autohide: false
+//         }
+//     );
+
+//     toast.show();
+// });
+
+// document.getElementById('btnInstalar').addEventListener('click', async () => {
+
+//     if (!deferredPrompt) return;
+
+//     deferredPrompt.prompt();
+
+//     await deferredPrompt.userChoice;
+
+//     deferredPrompt = null;
+// });
+
+// document.getElementById('btnFecharToast').addEventListener('click', () => {
+
+//     const toast = bootstrap.Toast.getInstance(
+//         document.getElementById('installToast')
+//     );
+
+//     if (toast) {
+//         toast.hide();
+//     }
+// });
+
+// window.addEventListener('appinstalled', () => {
+
+//     const toast = bootstrap.Toast.getInstance(
+//         document.getElementById('installToast')
+//     );
+
+//     if (toast) {
+//         toast.hide();
+//     }
+
+//     localStorage.setItem('app_instalado', 'true');
+// });
+
 let deferredPrompt;
 
+const toastElement = document.getElementById('installToast');
+
+const toast = new bootstrap.Toast(toastElement, {
+    autohide: false
+});
+
+const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+
+const isStandalone =
+    window.matchMedia('(display-mode: standalone)').matches ||
+    window.navigator.standalone;
+
+// iPhone
+if (isIOS && !isStandalone) {
+
+    document.getElementById('iosInstall').style.display = 'block';
+
+    toast.show();
+}
+
+// Android / Chrome
 window.addEventListener('beforeinstallprompt', (e) => {
+
+    if (localStorage.getItem('app_instalado') === 'true') {
+        return;
+    }
+
     e.preventDefault();
+
     deferredPrompt = e;
 
-    const toast = new bootstrap.Toast(
-        document.getElementById('installToast'),
-        {
-            autohide: false
-        }
-    );
+    document.getElementById('androidInstall').style.display = 'block';
 
     toast.show();
 });
@@ -63,31 +136,28 @@ document.getElementById('btnInstalar').addEventListener('click', async () => {
 
     deferredPrompt.prompt();
 
-    await deferredPrompt.userChoice;
+    const { outcome } = await deferredPrompt.userChoice;
+
+    if (outcome === 'accepted') {
+        toast.hide();
+    }
 
     deferredPrompt = null;
 });
 
 document.getElementById('btnFecharToast').addEventListener('click', () => {
+    toast.hide();
+});
 
-    const toast = bootstrap.Toast.getInstance(
-        document.getElementById('installToast')
-    );
-
-    if (toast) {
-        toast.hide();
-    }
+document.getElementById('btnFecharToastIOS').addEventListener('click', () => {
+    toast.hide();
 });
 
 window.addEventListener('appinstalled', () => {
 
-    const toast = bootstrap.Toast.getInstance(
-        document.getElementById('installToast')
-    );
-
-    if (toast) {
-        toast.hide();
-    }
-
     localStorage.setItem('app_instalado', 'true');
+
+    toast.hide();
+
+    console.log('Aplicativo instalado!');
 });
