@@ -567,33 +567,57 @@ function cadastrar_form() {
         $('#categoria').addClass('is-valid')
     }
 
-    Swal.fire({
-        title: 'Sucesso!',
-        text: 'Cadastrado com Sucesso',
-        icon: 'success'
-    });
+
+    // Swal.fire({
+    //     title: 'Sucesso!',
+    //     text: 'Cadastrado com Sucesso',
+    //     icon: 'success'
+    // });
 
 
-    $('#atendente').val('');
-    $('#Atendido').val('');
-    $('#servico_executado').val('');
-    $('#Duracao').val('');
-    $('#categoria').val('');
 
-    $('#atendente').removeClass('is-invalid');
-    $('#atendente').removeClass('is-valid');
+    if (atendente, Atendido,
+        servico_executado,
+        Duracao,
+        categoria) {
 
-    $('#Atendido').removeClass('is-invalid');
-    $('#Atendido').removeClass('is-valid');
+        Swal.fire({
+            title: 'Sucesso!',
+            text: 'Cadastrado com Sucesso',
+            icon: 'success'
+        });
 
-    $('#servico_executado').removeClass('is-invalid');
-    $('#servico_executado').removeClass('is-valid');
 
-    $('#Duracao').removeClass('is-invalid');
-    $('#Duracao').removeClass('is-valid');
+        $('#atendente').val('');
+        $('#Atendido').val('');
+        $('#servico_executado').val('');
+        $('#Duracao').val('');
+        $('#categoria').val('');
 
-    $('#categoria').removeClass('is-invalid');
-    $('#categoria').removeClass('is-valid');
+        $('#atendente').removeClass('is-invalid');
+        $('#atendente').removeClass('is-valid');
+
+        $('#Atendido').removeClass('is-invalid');
+        $('#Atendido').removeClass('is-valid');
+
+        $('#servico_executado').removeClass('is-invalid');
+        $('#servico_executado').removeClass('is-valid');
+
+        $('#Duracao').removeClass('is-invalid');
+        $('#Duracao').removeClass('is-valid');
+
+        $('#categoria').removeClass('is-invalid');
+        $('#categoria').removeClass('is-valid');
+
+
+
+
+
+
+
+    }
+
+
 
 
 
