@@ -1,7 +1,7 @@
 
 
 
- let atendimentos = [
+let atendimentos = [
     {
         id: 6,
         servico: "Como Tirar Fotos e Gravar Vídeos",
@@ -9,7 +9,8 @@
         duracao: "1 hora",
         disponibilidade: "Disponível",
         atendente: "Paula Martins",
-        atendido: "Sebastião Lima"
+        atendido: "Sebastião Lima",
+        data_atendimento: "17/06/2026"
     },
     {
         id: 7,
@@ -18,7 +19,8 @@
         duracao: "40 min",
         disponibilidade: "Disponível",
         atendente: "Ricardo Almeida",
-        atendido: "Helena Rocha"
+        atendido: "Helena Rocha",
+        data_atendimento: "17/06/2026"
     },
     {
         id: 8,
@@ -27,7 +29,8 @@
         duracao: "1h30",
         disponibilidade: "Agendamento",
         atendente: "Juliana Ribeiro",
-        atendido: "Pedro Nascimento"
+        atendido: "Pedro Nascimento",
+        data_atendimento: "17/06/2026"
     },
     {
         id: 9,
@@ -36,7 +39,8 @@
         duracao: "30 min",
         disponibilidade: "Disponível",
         atendente: "Marcos Vinícius",
-        atendido: "Lúcia Barbosa"
+        atendido: "Lúcia Barbosa",
+        data_atendimento: "16/06/2026"
     },
     {
         id: 10,
@@ -45,7 +49,8 @@
         duracao: "1 hora",
         disponibilidade: "Disponível",
         atendente: "Camila Ferreira",
-        atendido: "Roberto Martins"
+        atendido: "Roberto Martins",
+        data_atendimento: "16/06/2026"
     },
     {
         id: 11,
@@ -54,7 +59,8 @@
         duracao: "2 horas",
         disponibilidade: "Agendamento",
         atendente: "Eduardo Lopes",
-        atendido: "Grupo Vida Ativa"
+        atendido: "Grupo Vida Ativa",
+        data_atendimento: "16/06/2026"
     },
     {
         id: 12,
@@ -63,7 +69,8 @@
         duracao: "1 hora",
         disponibilidade: "Disponível",
         atendente: "Patrícia Gomes",
-        atendido: "Francisca Alves"
+        atendido: "Francisca Alves",
+        data_atendimento: "16/06/2026"
     },
     {
         id: 13,
@@ -72,7 +79,8 @@
         duracao: "45 min",
         disponibilidade: "Disponível",
         atendente: "Bruno Carvalho",
-        atendido: "Aparecido Moreira"
+        atendido: "Aparecido Moreira",
+        data_atendimento: "17/06/2026"
     },
     {
         id: 14,
@@ -81,7 +89,8 @@
         duracao: "50 min",
         disponibilidade: "Disponível",
         atendente: "Larissa Mendes",
-        atendido: "Neide Santos"
+        atendido: "Neide Santos",
+        data_atendimento: "15/06/2026"
     },
     {
         id: 15,
@@ -90,7 +99,8 @@
         duracao: "1h30",
         disponibilidade: "Agendamento",
         atendente: "Rafael Oliveira",
-        atendido: "Grupo Conectados"
+        atendido: "Grupo Conectados",
+        data_atendimento: "12/06/2026"
     },
     {
         id: 16,
@@ -99,16 +109,18 @@
         duracao: "1 hora",
         disponibilidade: "Disponível",
         atendente: "Mariana Lima",
-        atendido: "Benedito Alves"
+        atendido: "Benedito Alves",
+        data_atendimento: "12/06/2026"
     },
     {
-        id: 17,
+        id: 14,
         servico: "Como Fazer Pix com Segurança",
         categoria: "Oficina",
         duracao: "1h30",
         disponibilidade: "Disponível",
         atendente: "Felipe Rocha",
-        atendido: "Cecília Ramos"
+        atendido: "Cecília Ramos",
+        data_atendimento: "12/06/2026"
     },
     {
         id: 18,
@@ -117,7 +129,8 @@
         duracao: "45 min",
         disponibilidade: "Agendamento",
         atendente: "Aline Souza",
-        atendido: "Osvaldo Pereira"
+        atendido: "Osvaldo Pereira",
+        data_atendimento: "12/06/2026"
     },
     {
         id: 19,
@@ -126,7 +139,8 @@
         duracao: "1 hora",
         disponibilidade: "Disponível",
         atendente: "Gustavo Henrique",
-        atendido: "Ivone Carvalho"
+        atendido: "Ivone Carvalho",
+        data_atendimento: "12/06/2026"
     },
     {
         id: 20,
@@ -135,7 +149,8 @@
         duracao: "30 min",
         disponibilidade: "Disponível",
         atendente: "Sabrina Torres",
-        atendido: "Milton Dias"
+        atendido: "Milton Dias",
+        data_atendimento: "12/06/2026"
     },
     {
         id: 21,
@@ -144,7 +159,8 @@
         duracao: "2 horas",
         disponibilidade: "Agendamento",
         atendente: "Roberta Nunes",
-        atendido: "Grupo Proteção Digital"
+        atendido: "Grupo Proteção Digital",
+        data_atendimento: "12/06/2026"
     },
     {
         id: 22,
@@ -153,7 +169,8 @@
         duracao: "40 min",
         disponibilidade: "Disponível",
         atendente: "Diego Martins",
-        atendido: "Olga Fernandes"
+        atendido: "Olga Fernandes",
+        data_atendimento: "11/06/2026"
     },
     {
         id: 23,
@@ -162,7 +179,8 @@
         duracao: "1 hora",
         disponibilidade: "Disponível",
         atendente: "Tatiane Lopes",
-        atendido: "Raimundo Costa"
+        atendido: "Raimundo Costa",
+        data_atendimento: "11/06/2026"
     },
     {
         id: 24,
@@ -171,7 +189,8 @@
         duracao: "1h30",
         disponibilidade: "Agendamento",
         atendente: "Vinícius Cardoso",
-        atendido: "Tereza Cristina"
+        atendido: "Tereza Cristina",
+        data_atendimento: "11/06/2026"
     },
     {
         id: 25,
@@ -180,7 +199,8 @@
         duracao: "30 min",
         disponibilidade: "Disponível",
         atendente: "Letícia Almeida",
-        atendido: "Amadeu Ribeiro"
+        atendido: "Amadeu Ribeiro",
+        data_atendimento: "11/06/2026"
     },
     {
         id: 26,
@@ -189,7 +209,8 @@
         duracao: "1 hora",
         disponibilidade: "Disponível",
         atendente: "Renata Freitas",
-        atendido: "Irene Gonçalves"
+        atendido: "Irene Gonçalves",
+        data_atendimento: "11/06/2026"
     },
     {
         id: 27,
@@ -198,7 +219,8 @@
         duracao: "45 min",
         disponibilidade: "Disponível",
         atendente: "Leandro Silva",
-        atendido: "Geraldo Batista"
+        atendido: "Geraldo Batista",
+        data_atendimento: "11/06/2026"
     },
     {
         id: 28,
@@ -207,7 +229,8 @@
         duracao: "1 hora",
         disponibilidade: "Disponível",
         atendente: "Amanda Reis",
-        atendido: "Norma Duarte"
+        atendido: "Norma Duarte",
+        data_atendimento: "11/06/2026"
     },
     {
         id: 29,
@@ -216,7 +239,8 @@
         duracao: "1 hora",
         disponibilidade: "Agendamento",
         atendente: "Thiago Moreira",
-        atendido: "Marta Regina"
+        atendido: "Marta Regina",
+        data_atendimento: "11/06/2026"
     },
     {
         id: 30,
@@ -225,7 +249,8 @@
         duracao: "1h30",
         disponibilidade: "Disponível",
         atendente: "Cristiane Ramos",
-        atendido: "Grupo Consciente"
+        atendido: "Grupo Consciente",
+        data_atendimento: "10/06/2026"
     },
     {
         id: 31,
@@ -234,7 +259,8 @@
         duracao: "50 min",
         disponibilidade: "Disponível",
         atendente: "Henrique Batista",
-        atendido: "Alzira Monteiro"
+        atendido: "Alzira Monteiro",
+        data_atendimento: "10/06/2026"
     },
     {
         id: 32,
@@ -243,7 +269,8 @@
         duracao: "1 hora",
         disponibilidade: "Disponível",
         atendente: "Bianca Martins",
-        atendido: "Cláudio Barbosa"
+        atendido: "Cláudio Barbosa",
+        data_atendimento: "10/06/2026"
     },
     {
         id: 33,
@@ -252,7 +279,8 @@
         duracao: "35 min",
         disponibilidade: "Disponível",
         atendente: "Fábio Nascimento",
-        atendido: "Eunice Lopes"
+        atendido: "Eunice Lopes",
+        data_atendimento: "09/06/2026"
     },
     {
         id: 34,
@@ -261,7 +289,8 @@
         duracao: "1 hora",
         disponibilidade: "Agendamento",
         atendente: "Priscila Ferreira",
-        atendido: "Joana Moreira"
+        atendido: "Joana Moreira",
+        data_atendimento: "09/06/2026"
     },
     {
         id: 35,
@@ -270,7 +299,8 @@
         duracao: "45 min",
         disponibilidade: "Disponível",
         atendente: "Lucas Andrade",
-        atendido: "Nelson Vieira"
+        atendido: "Nelson Vieira",
+        data_atendimento: "09/06/2026"
     },
     {
         id: 36,
@@ -279,7 +309,8 @@
         duracao: "1 hora",
         disponibilidade: "Disponível",
         atendente: "Elaine Costa",
-        atendido: "Aurora Mendes"
+        atendido: "Aurora Mendes",
+        data_atendimento: "09/06/2026"
     },
     {
         id: 37,
@@ -288,7 +319,8 @@
         duracao: "30 min",
         disponibilidade: "Disponível",
         atendente: "Márcio Teixeira",
-        atendido: "Adelino Santos"
+        atendido: "Adelino Santos",
+        data_atendimento: "08/06/2026"
     },
     {
         id: 38,
@@ -297,7 +329,8 @@
         duracao: "1 hora",
         disponibilidade: "Agendamento",
         atendente: "Vanessa Rocha",
-        atendido: "Lourdes Almeida"
+        atendido: "Lourdes Almeida",
+        data_atendimento: "08/06/2026"
     },
     {
         id: 39,
@@ -306,7 +339,8 @@
         duracao: "40 min",
         disponibilidade: "Disponível",
         atendente: "André Carvalho",
-        atendido: "Hilda Martins"
+        atendido: "Hilda Martins",
+        data_atendimento: "08/06/2026"
     },
     {
         id: 40,
@@ -315,7 +349,8 @@
         duracao: "2 horas",
         disponibilidade: "Disponível",
         atendente: "Mônica Duarte",
-        atendido: "Grupo Inclusão Digital"
+        atendido: "Grupo Inclusão Digital",
+        data_atendimento: "08/06/2026"
     },
     {
         id: 41,
@@ -324,7 +359,8 @@
         duracao: "2 horas",
         disponibilidade: "Agendamento",
         atendente: "Caio Ribeiro",
-        atendido: "Grupo Melhor Conexão"
+        atendido: "Grupo Melhor Conexão",
+        data_atendimento: "05/06/2026"
     },
     {
         id: 42,
@@ -333,7 +369,8 @@
         duracao: "50 min",
         disponibilidade: "Disponível",
         atendente: "Nathália Gomes",
-        atendido: "Dirce Freitas"
+        atendido: "Dirce Freitas",
+        data_atendimento: "05/06/2026"
     },
     {
         id: 43,
@@ -342,7 +379,8 @@
         duracao: "1 hora",
         disponibilidade: "Disponível",
         atendente: "Igor Fernandes",
-        atendido: "Valdemar Souza"
+        atendido: "Valdemar Souza",
+        data_atendimento: "05/06/2026"
     },
     {
         id: 44,
@@ -351,7 +389,8 @@
         duracao: "1 hora",
         disponibilidade: "Disponível",
         atendente: "Débora Lima",
-        atendido: "Rosa Maria"
+        atendido: "Rosa Maria",
+        data_atendimento: "05/06/2026"
     },
     {
         id: 45,
@@ -360,7 +399,8 @@
         duracao: "1h30",
         disponibilidade: "Agendamento",
         atendente: "Samuel Pereira",
-        atendido: "Alberto Nunes"
+        atendido: "Alberto Nunes",
+        data_atendimento: "05/06/2026"
     }
 ];
 
@@ -378,7 +418,7 @@
 //         duracao: "1 hora",
 //         disponibilidade: "Disponível",
 //         atendente: "Maria Silva",
-//         atendido: "José Ferreira"
+//         atendido: "José Ferreira",
 //     },
 //     {
 //         id: 2,
@@ -462,11 +502,12 @@ window.exportarPDF = function () {
         item.atendido,
         item.categoria,
         item.servico,
-        item.duracao
+        item.duracao,
+        item.data_atendimento
     ]);
 
     doc.autoTable({
-        head: [['Atendente', 'Atendido', 'Categoria', 'Serviço', 'Duração']],
+        head: [['Atendente', 'Atendido', 'Categoria', 'Serviço', 'Duração', 'Data']],
         body: rows
     });
 
