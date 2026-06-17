@@ -502,11 +502,25 @@ window.exportarPDF = function () {
     logo.onload = function () {
 
         // Adiciona logo
-        doc.addImage(logo, 'PNG', 10, 10, 30, 30);
+        doc.addImage(logo, 'PNG', 10, 10, 10, 10);
 
         // Título
         doc.setFontSize(16);
-        doc.text('Relatório de Atendimentos', 50, 25);
+        doc.setFontSize(18);
+        doc.text(
+            "Inclusão Conecta",
+            doc.internal.pageSize.getWidth() / 2,
+            15,
+            { align: 'center' }
+        );
+
+        doc.setFontSize(12);
+        doc.text(
+            "Relatório de Atendimentos",
+            doc.internal.pageSize.getWidth() / 2,
+            25,
+            { align: 'center' }
+        );
 
         const rows = atendimentos.map(item => [
             item.atendente,
