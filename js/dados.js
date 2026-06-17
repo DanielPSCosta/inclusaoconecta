@@ -522,7 +522,7 @@ function cadastrar_form() {
     let atendente = $('#atendente').val();
     let Atendido = $('#Atendido').val();
     let servico_executado = $('#servico_executado').val();
-    let Duracao = $('#Duracao').val();
+    let duracao = $('#Duracao').val();
     let categoria = $('#categoria').val();
 
     if (atendente == '') {
@@ -551,7 +551,7 @@ function cadastrar_form() {
         $('#servico_executado').addClass('is-valid')
     }
 
-    if (Duracao == '') {
+    if (duracao == '') {
         $('#Duracao').removeClass('is-valid')
         $('#Duracao').addClass('is-invalid')
     } else {
@@ -576,9 +576,9 @@ function cadastrar_form() {
 
 
 
-    if (atendente, Atendido,
-        servico_executado,
-        Duracao,
+    if (atendente && Atendido &&
+        servico_executado &&
+        duracao &&
         categoria) {
 
         Swal.fire({
@@ -624,28 +624,28 @@ function cadastrar_form() {
 
 
 
-    $.ajax({
-        url: 'https://inclusaoconecta.onrender.com/PHP/form.php',
-        type: 'POST',
-        dataType: 'json',
-        data: {
-            atendente: $('#atendente').val(),
-            Atendido: $('#Atendido').val(),
-            servico_executado: $('#servico_executado').val(),
-            Duracao: $('#Duracao').val(),
-            categoria: $('#categoria').val()
-        },
-        success: function (retorno) {
-            console.log(retorno);
+    // $.ajax({
+    //     url: 'https://inclusaoconecta.onrender.com/PHP/form.php',
+    //     type: 'POST',
+    //     dataType: 'json',
+    //     data: {
+    //         atendente: $('#atendente').val(),
+    //         Atendido: $('#Atendido').val(),
+    //         servico_executado: $('#servico_executado').val(),
+    //         Duracao: $('#Duracao').val(),
+    //         categoria: $('#categoria').val()
+    //     },
+    //     success: function (retorno) {
+    //         console.log(retorno);
 
-            if (retorno.status) {
-                alert('Registro salvo com sucesso!');
-            }
-        },
-        error: function (erro) {
-            console.log(erro);
-        }
-    });
+    //         if (retorno.status) {
+    //             alert('Registro salvo com sucesso!');
+    //         }
+    //     },
+    //     error: function (erro) {
+    //         console.log(erro);
+    //     }
+    // });
 
 }
 
