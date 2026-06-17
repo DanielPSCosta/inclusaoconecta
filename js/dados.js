@@ -504,17 +504,7 @@ window.exportarPDF = function () {
         // Adiciona logo
         doc.addImage(logo, 'PNG', 10, 10, 10, 10);
 
-        // Título
-        doc.setFontSize(16);
         doc.setFontSize(18);
-        doc.text(
-            "Inclusão Conecta",
-            doc.internal.pageSize.getWidth() / 2,
-            15,
-            { align: 'center' }
-        );
-
-        doc.setFontSize(12);
         doc.text(
             "Relatório de Atendimentos",
             doc.internal.pageSize.getWidth() / 2,
