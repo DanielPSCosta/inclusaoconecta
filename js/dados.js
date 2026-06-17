@@ -567,6 +567,20 @@ function cadastrar_form() {
         $('#categoria').addClass('is-valid')
     }
 
+    Swal.fire({
+        title: 'Sucesso!',
+        text: 'Cadastrado com Sucesso',
+        icon: 'success'
+    });
+
+
+    $('#atendente').val('');
+    $('#Atendido').val('');
+    $('#servico_executado').val('');
+    $('#Duracao').val('');
+    $('#categoria').val('');
+
+
 
     $.ajax({
         url: 'https://inclusaoconecta.onrender.com/PHP/form.php',
