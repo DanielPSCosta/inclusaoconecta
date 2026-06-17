@@ -580,6 +580,24 @@ function cadastrar_form() {
     $('#Duracao').val('');
     $('#categoria').val('');
 
+    $('#atendente').removeClass('is-invalid');
+    $('#atendente').removeClass('is-valid');
+
+    $('#Atendido').removeClass('is-invalid');
+    $('#Atendido').removeClass('is-valid');
+
+    $('#servico_executado').removeClass('is-invalid');
+    $('#servico_executado').removeClass('is-valid');
+
+    $('#Duracao').removeClass('is-invalid');
+    $('#Duracao').removeClass('is-valid');
+
+    $('#categoria').removeClass('is-invalid');
+    $('#categoria').removeClass('is-valid');
+
+
+
+
 
 
     $.ajax({
