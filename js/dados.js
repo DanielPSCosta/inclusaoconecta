@@ -495,23 +495,36 @@ window.exportarPDF = function () {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-    doc.setFont('helvetica');
+    // Logo
+    const logo = new Image();
+    logo.src = '../assets/img/inclusao_conecta_separado.png'; // caminho da sua imagem
 
-    const rows = atendimentos.map(item => [
-        item.atendente,
-        item.atendido,
-        item.categoria,
-        item.servico,
-        item.duracao,
-        item.data_atendimento
-    ]);
+    logo.onload = function () {
 
-    doc.autoTable({
-        head: [['Atendente', 'Atendido', 'Categoria', 'Serviço', 'Duração', 'Data']],
-        body: rows
-    });
+        // Adiciona logo
+        doc.addImage(logo, 'PNG', 10, 10, 30, 30);
 
-    doc.save('atendimentos.pdf');
+        // Título
+        doc.setFontSize(16);
+        doc.text('Relatório de Atendimentos', 50, 25);
+
+        const rows = atendimentos.map(item => [
+            item.atendente,
+            item.atendido,
+            item.categoria,
+            item.servico,
+            item.duracao,
+            item.data_atendimento
+        ]);
+
+        doc.autoTable({
+            startY: 50, // deixa espaço para o logo
+            head: [['Atendente', 'Atendido', 'Categoria', 'Serviço', 'Duração', 'Data']],
+            body: rows
+        });
+
+        doc.save('atendimentos.pdf');
+    };
 };
 
 
