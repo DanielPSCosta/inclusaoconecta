@@ -497,7 +497,7 @@ window.exportarPDF = function () {
 
     // Logo
     const logo = new Image();
-    logo.src = '../assets/img/inclusao_conecta_separado.png'; // caminho da sua imagem
+    logo.src = '../assets/img/logo.png'; // caminho da sua imagem
 
     logo.onload = function () {
 
