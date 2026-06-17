@@ -502,7 +502,7 @@ window.exportarPDF = function () {
     logo.onload = function () {
 
         // Adiciona logo
-        doc.addImage(logo, 'PNG', 10, 10, 10, 10);
+        doc.addImage(logo, 'PNG', 15, 15, 15, 15);
 
         doc.setFontSize(18);
         doc.text(
