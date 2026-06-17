@@ -522,7 +522,7 @@ window.exportarPDF = function () {
         ]);
 
         doc.autoTable({
-            startY: 20, // deixa espaço para o logo
+            startY: 40, // deixa espaço para o logo
             head: [['Atendente', 'Atendido', 'Categoria', 'Serviço', 'Duração', 'Data']],
             body: rows
         });
