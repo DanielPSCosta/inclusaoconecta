@@ -157,6 +157,63 @@
 
 
 
+
+
+
+
+
+
+
+    <button onclick="lerTexto()">Ler página</button>
+    <button onclick="pararLeitura()">Parar leitura</button>
+    <script>
+        function lerTexto() {
+            const texto = document.body.innerText;
+            const fala = new SpeechSynthesisUtterance(texto);
+
+            fala.lang = 'pt-BR';
+            fala.rate = 1;
+
+            window.speechSynthesis.speak(fala);
+        }
+
+        function pararLeitura() {
+            window.speechSynthesis.cancel();
+        }
+
+    </script>
+
+
+    <br><br><br>
+    <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+    <header>
+        Menu do site
+    </header>
+
+    <main id="conteudo">
+        <h1>Conteúdo principal</h1>
+    </main>
+
+
+    <style>
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 10px;
+            background: #000;
+            color: #fff;
+            padding: 8px;
+            z-index: 999;
+        }
+
+        .skip-link:focus {
+            top: 10px;
+        }
+    </style>
+
+
+
     <!-- <a class="whatsapp-btn"
         href=" https://wa.me//5511961194875?text=Tenho%20interesse%20em%20participar%20do%20projeto%20Olá%20Barbará"
         aria-label="Chamar no WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> -->
