@@ -39,8 +39,8 @@
                             href="sobre.html">Sobre</a></li>
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
                             href="formulario.html">Contato</a></li>
-                            <li class="nav-item"><a class="nav-link rounded-pill px-3 py-3 fw-semibold"
-                                href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link rounded-pill px-3 py-3 fw-semibold"
+                            href="login.html">Login</a></li>
 
 
 
@@ -191,18 +191,58 @@
 
 
 
+
+
+        <!-- VLibras -->
         <div vw class="enabled">
             <div vw-access-button class="active"></div>
+
             <div vw-plugin-wrapper>
                 <div class="vw-plugin-top-wrapper"></div>
             </div>
+
+
+
+            <!-- Botões de leitura lateral -->
+            <div class="leitor-lateral mt-5">
+                <button type="button" class="btn btn-primary leitor-btn" onclick="lerTexto()" title="Ler página">
+                    <span class="icone">🔊</span>
+                </button>
+
+                <button type="button" class="btn btn-danger leitor-btn" onclick="pararLeitura()" title="Parar leitura">
+                    <span class="icone">⏹</span>
+                </button>
+            </div>
         </div>
+
 
         <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 
         <script>
             new window.VLibras.Widget('https://vlibras.gov.br/app');
         </script>
+
+
+        <script>
+            //  Botões de leitura lateral 
+            function lerTexto() {
+                const texto = document.body.innerText;
+                const fala = new SpeechSynthesisUtterance(texto);
+
+                fala.lang = 'pt-BR';
+                fala.rate = 1;
+
+                window.speechSynthesis.speak(fala);
+            }
+
+            function pararLeitura() {
+                window.speechSynthesis.cancel();
+            }
+
+        </script>
+
+
+
 
 
 
@@ -213,7 +253,8 @@
         <div class="container">
             <div class="row align-items-center g-3">
                 <div class="col-md-6 d-flex align-items-center gap-3">
-                    <img class="footer-logo" src="../assets/img/inclusao_conecta_separado.png" alt="Logo inclusão conecta">
+                    <img class="footer-logo" src="../assets/img/inclusao_conecta_separado.png"
+                        alt="Logo inclusão conecta">
                     <p>© 2026 inclusão conecta - Inclusão digital com humanidade.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
@@ -229,11 +270,10 @@
 
 
     <a class="whatsapp-btn"
-   href="https://wa.me/5511961194875?text=Ol%C3%A1!%20%F0%9F%91%8B%0A%0AGostaria%20muito%20de%20participar%20da%20Inclus%C3%A3o%20Conecta%20e%20aprender%20mais%20sobre%20tecnologia%20de%20forma%20simples%20e%20pr%C3%A1tica.%0A%0APoderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20como%20funciona%20o%20projeto%3F"
-   target="_blank"
-   aria-label="Chamar no WhatsApp">
-    <i class="fa fa-whatsapp" aria-hidden="true"></i>
-</a>
+        href="https://wa.me/5511961194875?text=Ol%C3%A1!%20%F0%9F%91%8B%0A%0AGostaria%20muito%20de%20participar%20da%20Inclus%C3%A3o%20Conecta%20e%20aprender%20mais%20sobre%20tecnologia%20de%20forma%20simples%20e%20pr%C3%A1tica.%0A%0APoderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20como%20funciona%20o%20projeto%3F"
+        target="_blank" aria-label="Chamar no WhatsApp">
+        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+    </a>
 
     <script src="https://kit.fontawesome.com/775fd40529.js" crossorigin="anonymous"></script>
 

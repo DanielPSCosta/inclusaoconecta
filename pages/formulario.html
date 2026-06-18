@@ -16,27 +16,33 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white bg-opacity-75 border-bottom shadow-sm">
         <div class="container fs-3">
-            <a class="navbar-brand fw-bold d-inline-flex align-items-center gap-2 text-decoration-none" href="../index.html" aria-label="Página inicial inclusão conecta">
+            <a class="navbar-brand fw-bold d-inline-flex align-items-center gap-2 text-decoration-none"
+                href="../index.html" aria-label="Página inicial inclusão conecta">
                 <img class="brand-logo" src="../assets/img/inclusao_conecta_separado.png" alt="Logo inclusão conecta">
                 <span class="brand-text fs-3">
                     Inclusão conecta
                 </span>
             </a>
 
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
-                aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-                    <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold" href="../index.html">Início</a></li>
-                    <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold" href="planos.html">Doações</a></li>
-                    <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold" href="sobre.html">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link active rounded-pill px-3 py-2 fw-semibold" href="formulario.html">Contato</a></li>
-                    <li class="nav-item"><a class="nav-link rounded-pill px-3 py-3 fw-semibold" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
+                            href="../index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
+                            href="planos.html">Doações</a></li>
+                    <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
+                            href="sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link active rounded-pill px-3 py-2 fw-semibold"
+                            href="formulario.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link rounded-pill px-3 py-3 fw-semibold"
+                            href="login.html">Login</a></li>
 
-                    
+
 
                     <li class="nav-item menu_letra">
                         <button class="btn btn-outline-secondary btn-sm" id="aumentar">A+</button>
@@ -96,7 +102,7 @@
                             <span class="eyebrow">Mensagem</span>
                             <h2 class="mb-3" style="font-weight:950; color:var(--vv-blue); letter-spacing:-.04em;">Conte
                                 o que você precisa</h2>
-          
+
 
                             <form id="formContato">
                                 <div class="row g-3">
@@ -159,18 +165,57 @@
 
 
 
+
+
+        <!-- VLibras -->
         <div vw class="enabled">
             <div vw-access-button class="active"></div>
+
             <div vw-plugin-wrapper>
                 <div class="vw-plugin-top-wrapper"></div>
             </div>
+
+
+
+            <!-- Botões de leitura lateral -->
+            <div class="leitor-lateral mt-5">
+                <button type="button" class="btn btn-primary leitor-btn" onclick="lerTexto()" title="Ler página">
+                    <span class="icone">🔊</span>
+                </button>
+
+                <button type="button" class="btn btn-danger leitor-btn" onclick="pararLeitura()" title="Parar leitura">
+                    <span class="icone">⏹</span>
+                </button>
+            </div>
         </div>
+
 
         <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 
         <script>
             new window.VLibras.Widget('https://vlibras.gov.br/app');
         </script>
+
+
+        <script>
+            //  Botões de leitura lateral 
+            function lerTexto() {
+                const texto = document.body.innerText;
+                const fala = new SpeechSynthesisUtterance(texto);
+
+                fala.lang = 'pt-BR';
+                fala.rate = 1;
+
+                window.speechSynthesis.speak(fala);
+            }
+
+            function pararLeitura() {
+                window.speechSynthesis.cancel();
+            }
+
+        </script>
+
+
 
 
 
@@ -181,7 +226,8 @@
         <div class="container">
             <div class="row align-items-center g-3">
                 <div class="col-md-6 d-flex align-items-center gap-3">
-                    <img class="footer-logo" src="../assets/img/inclusao_conecta_separado.png" alt="Logo inclusão conecta">
+                    <img class="footer-logo" src="../assets/img/inclusao_conecta_separado.png"
+                        alt="Logo inclusão conecta">
                     <p>© 2026 inclusão conecta - Inclusão digital com humanidade.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
@@ -197,11 +243,10 @@
 
 
     <a class="whatsapp-btn"
-   href="https://wa.me/5511961194875?text=Ol%C3%A1!%20%F0%9F%91%8B%0A%0AGostaria%20muito%20de%20participar%20da%20Inclus%C3%A3o%20Conecta%20e%20aprender%20mais%20sobre%20tecnologia%20de%20forma%20simples%20e%20pr%C3%A1tica.%0A%0APoderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20como%20funciona%20o%20projeto%3F"
-   target="_blank"
-   aria-label="Chamar no WhatsApp">
-    <i class="fa fa-whatsapp" aria-hidden="true"></i>
-</a>
+        href="https://wa.me/5511961194875?text=Ol%C3%A1!%20%F0%9F%91%8B%0A%0AGostaria%20muito%20de%20participar%20da%20Inclus%C3%A3o%20Conecta%20e%20aprender%20mais%20sobre%20tecnologia%20de%20forma%20simples%20e%20pr%C3%A1tica.%0A%0APoderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%20sobre%20como%20funciona%20o%20projeto%3F"
+        target="_blank" aria-label="Chamar no WhatsApp">
+        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+    </a>
 
     <script src="https://kit.fontawesome.com/775fd40529.js" crossorigin="anonymous"></script>
 

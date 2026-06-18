@@ -118,18 +118,58 @@
 
 
 
+
+
+        <!-- VLibras -->
         <div vw class="enabled">
             <div vw-access-button class="active"></div>
+
             <div vw-plugin-wrapper>
                 <div class="vw-plugin-top-wrapper"></div>
             </div>
+
+
+
+            <!-- Botões de leitura lateral -->
+            <div class="leitor-lateral mt-5">
+                <button type="button" class="btn btn-primary leitor-btn" onclick="lerTexto()" title="Ler página">
+                    <span class="icone">🔊</span>
+                </button>
+
+                <button type="button" class="btn btn-danger leitor-btn" onclick="pararLeitura()" title="Parar leitura">
+                    <span class="icone">⏹</span>
+                </button>
+            </div>
         </div>
+
 
         <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 
         <script>
             new window.VLibras.Widget('https://vlibras.gov.br/app');
         </script>
+
+
+        <script>
+            //  Botões de leitura lateral 
+            function lerTexto() {
+                const texto = document.body.innerText;
+                const fala = new SpeechSynthesisUtterance(texto);
+
+                fala.lang = 'pt-BR';
+                fala.rate = 1;
+
+                window.speechSynthesis.speak(fala);
+            }
+
+            function pararLeitura() {
+                window.speechSynthesis.cancel();
+            }
+
+        </script>
+
+
+
 
 
 
