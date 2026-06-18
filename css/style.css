@@ -94,27 +94,12 @@ a {
 /* =========================================================
    BOTÕES / ELEMENTOS BASE
 ========================================================= */
-.btn {
+.btn_estilo {
     padding: 12px 22px;
     border-radius: 999px;
     font-weight: 800;
 }
 
-/* .btn-primary,
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-outline-primary:hover,
-.btn-outline-primary.is-selected {
-    color: #fff;
-    border-color: transparent;
-    background: linear-gradient(135deg, #179b86, #69d2bc);
-}
-
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:focus {
-    box-shadow: 0 16px 30px rgba(23, 155, 134, .25);
-} */
 
 .btn-outline-primary {
     color: #179b86;
