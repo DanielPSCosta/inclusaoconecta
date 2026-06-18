@@ -57,63 +57,74 @@
                 </div>
             </div>
             <div class="col-sm p-3 min-vh-100">
-                <main class="main-content">
-                    <div class="container">
+                <main class="">
+                    <div class="container-fluid">
                         <section>
 
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-4 mb-3">
-                                        <label for="validationServer01">Atendente</label>
-                                        <input type="text" class="form-control  " id="atendente" value="" required>
-                                        <div class="invalid-feedback">
-                                            Favor preencher o campo Atendente!
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mb-3">
-                                        <label for="validationServer02">Atendido</label>
-                                        <input type="text" class="form-control" id="Atendido" value="" required>
-                                        <div class="invalid-feedback">
-                                            Favor preencher o campo Atendido!
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mb-3">
-                                        <label for="validationServerUsername">Serviço</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" id="servico_executado"
-                                                aria-describedby="inputGroupPrepend3" required>
-                                            <div class="invalid-feedback">
-                                                Favor preencher o campo Serviço!
+                            <div class="card">
+                                <h5 class="card-header py-3">Cadastro de atendimentos</h5>
+                                <div class="card-body">
+
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-4 mb-3">
+                                                <label for="validationServer01">Atendente</label>
+                                                <input type="text" class="form-control  " id="atendente" value=""
+                                                    required>
+                                                <div class="invalid-feedback">
+                                                    Favor preencher o campo Atendente!
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="validationServer02">Atendido</label>
+                                                <input type="text" class="form-control" id="Atendido" value="" required>
+                                                <div class="invalid-feedback">
+                                                    Favor preencher o campo Atendido!
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 mb-3">
+                                                <label for="validationServerUsername">Serviço</label>
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" id="servico_executado"
+                                                        aria-describedby="inputGroupPrepend3" required>
+                                                    <div class="invalid-feedback">
+                                                        Favor preencher o campo Serviço!
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="validationServer03">Duração</label>
-                                        <input type="text" class="form-control " id="Duracao" required>
-                                        <div class="invalid-feedback">
-                                            Favor preencher o campo Duração!
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="validationServer03">Duração</label>
+                                                <input type="text" class="form-control " id="Duracao" required>
+                                                <div class="invalid-feedback">
+                                                    Favor preencher o campo Duração!
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <label for="validationServer04">Categoria</label>
+                                                <select class="form-control  " id="categoria" required>
+                                                    <option value="">Selecione</option>
+                                                    <option>Suporte Individual</option>
+                                                    <option>Palestra</option>
+                                                    <option>Suporte técnico</option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    Favor preencher o campo Categoria!
+                                                </div>
+                                            </div>
+
                                         </div>
-                                    </div>
-                                    <div class="col-md-3 mb-3">
-                                        <label for="validationServer04">Categoria</label>
-                                        <select class="form-control  " id="categoria" required>
-                                            <option value="">Selecione</option>
-                                            <option>Suporte Individual</option>
-                                            <option>Palestra</option>
-                                            <option>Suporte técnico</option>
-                                        </select>
-                                        <div class="invalid-feedback">
-                                            Favor preencher o campo Categoria!
-                                        </div>
-                                    </div>
+
+                                        <button class="btn btn-primary" type="button"
+                                            onclick="cadastrar_form()">Cadastrar</button>
+                                    </form>
 
                                 </div>
+                            </div>
 
-                                <button class="btn btn-primary" type="button"
-                                    onclick="cadastrar_form()">Cadastrar</button>
-                            </form>
+
+
 
                         </section>
 
