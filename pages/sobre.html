@@ -132,15 +132,20 @@
 
             <!-- Botões de leitura lateral -->
             <div class="leitor-lateral mt-5">
-                <button type="button" class="btn btn-primary leitor-btn" onclick="lerTexto()" title="Ler página">
-                    <span class="icone">🔊</span>
-                </button>
+                <div class="row mb-1">
+                    <button type="button" class="btn btn-primary btn-sm" onclick="lerTexto()" title="Ler página">
+                        <span class="icone">🔊</span>
+                    </button>
+                </div>
 
-                <button type="button" class="btn btn-danger leitor-btn" onclick="pararLeitura()" title="Parar leitura">
-                    <span class="icone">⏹</span>
-                </button>
+                <div class="row">
+                    <button type="button" class="btn btn-danger btn-sm" onclick="pararLeitura()" title="Parar leitura">
+                        <span class="icone">⏹</span>
+                    </button>
+                </div>
             </div>
         </div>
+
 
 
         <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
