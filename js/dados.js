@@ -497,7 +497,7 @@ window.exportarPDF = function () {
 
     // Logo
     const logo = new Image();
-    logo.src = '../assets/img/logo.png'; // caminho da sua imagem
+    logo.src = '../assets/img/inclusao_conecta_separado.png'; // caminho da sua imagem
 
     logo.onload = function () {
 
@@ -528,10 +528,10 @@ window.exportarPDF = function () {
         });
 
         // doc.save('atendimentos.pdf');
-      const pdfBlob = doc.output('blob');
-const pdfUrl = URL.createObjectURL(pdfBlob);
+        const pdfBlob = doc.output('blob');
+        const pdfUrl = URL.createObjectURL(pdfBlob);
 
-window.open(pdfUrl, '_blank');
+        window.open(pdfUrl, '_blank');
     };
 };
 
