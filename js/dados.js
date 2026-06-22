@@ -527,7 +527,8 @@ window.exportarPDF = function () {
             body: rows
         });
 
-        doc.save('atendimentos.pdf');
+        // doc.save('atendimentos.pdf');
+        window.location.href = pdfUrl;
     };
 };
 
