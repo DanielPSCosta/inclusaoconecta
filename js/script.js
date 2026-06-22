@@ -22,7 +22,13 @@ document.getElementById('resetar').onclick = () => {
 };
 
 function aplicarFonte() {
-    tamanho = Math.max(12, Math.min(18, tamanho)); // Limites
+    // tamanho = Math.max(12, Math.min(18, tamanho)); // Limites
+
+    let maximo = window.innerWidth >= 1024 ? 18 : 32;
+
+    tamanho = Math.max(12, Math.min(maximo, tamanho));
+
+
     document.documentElement.style.fontSize = tamanho + 'px';
     localStorage.setItem('fonte', tamanho);
 }
