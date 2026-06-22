@@ -528,7 +528,10 @@ window.exportarPDF = function () {
         });
 
         // doc.save('atendimentos.pdf');
-        window.location.href = pdfUrl;
+      const pdfBlob = doc.output('blob');
+const pdfUrl = URL.createObjectURL(pdfBlob);
+
+window.open(pdfUrl, '_blank');
     };
 };
 
