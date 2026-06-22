@@ -22,7 +22,7 @@ document.getElementById('resetar').onclick = () => {
 };
 
 function aplicarFonte() {
-    tamanho = Math.max(12, Math.min(32, tamanho)); // Limites
+    tamanho = Math.max(12, Math.min(24, tamanho)); // Limites
     document.documentElement.style.fontSize = tamanho + 'px';
     localStorage.setItem('fonte', tamanho);
 }
