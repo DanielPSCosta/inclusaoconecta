@@ -489,15 +489,6 @@ document.addEventListener('DOMContentLoaded', () => {
 function carregarAtendimentos() {
 
 
-    Swal.fire({
-        title: 'Carregando...',
-        text: 'Por favor, aguarde',
-        allowOutsideClick: false,
-        didOpen: () => {
-            Swal.showLoading();
-        }
-    });
-
 
     $.ajax({
         url: '../PHP/listar.php',
@@ -505,6 +496,18 @@ function carregarAtendimentos() {
         dataType: 'json',
 
         success: function (dados) {
+
+
+            Swal.fire({
+                title: 'Carregando...',
+                text: 'Por favor, aguarde',
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+
+
 
             // Limpa a tabela
             $('#table').bootstrapTable('removeAll');
