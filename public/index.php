@@ -10,9 +10,9 @@
     <title>Inclusão conecta</title>
 
 
-    <link rel="icon" href="../assets/img/logo.png" type="image/png">
+    <link rel="icon" href="/assets/img/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="../assets/img/logo.png">
-    <link rel="manifest" href="../manifest.json">
+    <link rel="manifest" href="/manifest.json">
 
     <meta name="theme-color" content="#000000">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -31,7 +31,7 @@
         <div class="container fs-3">
             <a class="navbar-brand fw-bold d-inline-flex align-items-center gap-2 text-decoration-none"
                 href="index.html" aria-label="Página inicial Inclusão conecta">
-                <img class="brand-logo" src="../assets/img/logo.png" alt="Logo Inclusão conecta">
+                <img class="brand-logo" src="/assets/img/logo.png" alt="Logo Inclusão conecta">
                 <span class="brand-text fs-3">
                     Inclusão conecta
                 </span>
@@ -47,13 +47,13 @@
                     <li class="nav-item"><a class="nav-link active rounded-pill px-3 py-2 fw-semibold"
                             href="index.php">Início</a></li>
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
-                            href="../pages/planos.php">Doações</a></li>
+                            href="/pages/planos.php">Doações</a></li>
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
-                            href="../pages/sobre.php">Sobre</a></li>
+                            href="/pages/sobre.php">Sobre</a></li>
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
-                            href="../pages/formulario.php">Contato</a></li>
+                            href="/pages/formulario.php">Contato</a></li>
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-3 fw-semibold"
-                            href="../pages/login.php">Login</a></li>
+                            href="/pages/login.php">Login</a></li>
 
 
 
@@ -337,8 +337,8 @@
      <i class="fa fa-whatsapp" aria-hidden="true"></i>
  </a>
     <script src="https://kit.fontawesome.com/775fd40529.js" crossorigin="anonymous"></script>
-    <script src="../js/bootstrap.bundle.min.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
 
 
 
