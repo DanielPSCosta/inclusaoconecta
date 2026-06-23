@@ -248,33 +248,6 @@
 
 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-
-            $('#table').bootstrapTable({
-                locale: 'pt-BR',
-
-                iconsPrefix: 'bi',
-                icons: {
-                    paginationSwitchDown: 'bi-caret-down-fill',
-                    paginationSwitchUp: 'bi-caret-up-fill',
-                    refresh: 'bi-arrow-clockwise',
-                    toggleOff: 'bi-list-ul',
-                    toggleOn: 'bi-grid-3x3-gap',
-                    columns: 'bi-layout-three-columns',
-                    detailOpen: 'bi-plus',
-                    detailClose: 'bi-dash',
-                    fullscreen: 'bi-arrows-fullscreen',
-                    export: 'bi-download'
-                }
-            });
-
-            carregarAtendimentos();
-
-        });
-    </script>
-
-
     <a class="whatsapp-btn"
         href="https://wa.me/5511961194875?text=Ol%C3%A1!%20%F0%9F%91%8B%0A%0AGostaria%20de%20receber%20suporte%20da%20Inclus%C3%A3o%20Conecta.%0A%0APoderiam%20me%20orientar%20e%20fornecer%20mais%20informa%C3%A7%C3%B5es%20sobre%20como%20posso%20obter%20ajuda%3F%0A%0AObrigado(a)!"
         target="_blank"

@@ -113,6 +113,40 @@
 
 
 
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            $('#table').bootstrapTable({
+                locale: 'pt-BR',
+
+                iconsPrefix: 'bi',
+                icons: {
+                    paginationSwitchDown: 'bi-caret-down-fill',
+                    paginationSwitchUp: 'bi-caret-up-fill',
+                    refresh: 'bi-arrow-clockwise',
+                    toggleOff: 'bi-list-ul',
+                    toggleOn: 'bi-grid-3x3-gap',
+                    columns: 'bi-layout-three-columns',
+                    detailOpen: 'bi-plus',
+                    detailClose: 'bi-dash',
+                    fullscreen: 'bi-arrows-fullscreen',
+                    export: 'bi-download'
+                }
+            });
+
+            carregarAtendimentos();
+
+        });
+    </script>
+
+
+
+
+
+
     <!-- <a class="whatsapp-btn"
         href=" https://wa.me//5511961194875?text=Tenho%20interesse%20em%20participar%20do%20projeto%20Olá%20Barbará"
         aria-label="Chamar no WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a> -->

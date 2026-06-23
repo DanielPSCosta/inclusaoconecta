@@ -1,5 +1,28 @@
 
 
+// document.addEventListener('DOMContentLoaded', () => {
+
+//     $('#table').bootstrapTable({
+//         locale: 'pt-BR',
+
+//         iconsPrefix: 'bi',
+//         icons: {
+//             paginationSwitchDown: 'bi-caret-down-fill',
+//             paginationSwitchUp: 'bi-caret-up-fill',
+//             refresh: 'bi-arrow-clockwise',
+//             toggleOff: 'bi-list-ul',
+//             toggleOn: 'bi-grid-3x3-gap',
+//             columns: 'bi-layout-three-columns',
+//             detailOpen: 'bi-plus',
+//             detailClose: 'bi-dash',
+//             fullscreen: 'bi-arrows-fullscreen',
+//             export: 'bi-download'
+//         }
+//     });
+
+//     carregarAtendimentos();
+
+// });
 
 
 
@@ -55,7 +78,6 @@ window.exportarPDF = function () {
         dataType: 'json',
 
         success: function (dados) {
-            
 
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
