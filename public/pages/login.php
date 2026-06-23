@@ -155,18 +155,14 @@
 
 
 
-    <!-- JQuery -->
+    <script src="https://kit.fontawesome.com/775fd40529.js" crossorigin="anonymous"></script>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <!-- TableExport -->
-    <script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin/tableExport.min.js"></script>
-
-
-    <script src="https://kit.fontawesome.com/775fd40529.js" crossorigin="anonymous"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/dados.js"></script>
-    <!-- <script src="../js/script.js"></script> -->
+    <script src="../js/script.js"></script>
 
     <!-- 
     <script>
