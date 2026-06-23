@@ -91,7 +91,7 @@
                     <div class="col-lg-6">
                         <div class="hero-visual mx-auto" aria-hidden="true">
                             <div class="hero-blob"></div>
-                            <img class="hero-mascot" src="../assets/img/logo.png"
+                            <img class="hero-mascot" src="/assets/img/logo.png"
                                 alt="Mascote Inclusão conecta">
                         </div>
                     </div>
