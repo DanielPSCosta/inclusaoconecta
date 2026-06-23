@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white bg-opacity-75 border-bottom shadow-sm">
         <div class="container fs-3">
             <a class="navbar-brand fw-bold d-inline-flex align-items-center gap-2 text-decoration-none"
-                href="../index.html" aria-label="Página inicial inclusão conecta">
+                href="../public/index.php" aria-label="Página inicial inclusão conecta">
                 <img class="brand-logo" src="../assets/img/logo.png" alt="Logo inclusão conecta">
                 <span class="brand-text fs-3">
                     Inclusão conecta
@@ -32,15 +32,15 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
-                            href="../index.html">Início</a></li>
+                            href="../public/index.php">Início</a></li>
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
-                            href="planos.html">Doações</a></li>
+                            href="planos.php">Doações</a></li>
                     <li class="nav-item"><a class="nav-link active rounded-pill px-3 py-2 fw-semibold"
-                            href="sobre.html">Sobre</a></li>
+                            href="sobre.php">Sobre</a></li>
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
-                            href="formulario.html">Contato</a></li>
+                            href="formulario.php">Contato</a></li>
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-3 fw-semibold"
-                            href="login.html">Login</a></li>
+                            href="login.php">Login</a></li>
 
 
                     <li class="nav-item menu_letra">
@@ -189,11 +189,11 @@
                     <p>© 2026 inclusão conecta - Inclusão digital com humanidade.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <a class="text-white-50 text-decoration-none" href="../index.html">Início</a>
+                    <a class="text-white-50 text-decoration-none" href="../index.php">Início</a>
                     <span class="mx-2 text-white-50">•</span>
-                    <a class="text-white-50 text-decoration-none" href="planos.html">Doações</a>
+                    <a class="text-white-50 text-decoration-none" href="planos.php">Doações</a>
                     <span class="mx-2 text-white-50">•</span>
-                    <a class="text-white-50 text-decoration-none" href="formulario.html">Contato</a>
+                    <a class="text-white-50 text-decoration-none" href="formulario.php">Contato</a>
                 </div>
             </div>
         </div>
