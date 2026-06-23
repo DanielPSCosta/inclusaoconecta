@@ -592,6 +592,17 @@ window.exportarPDF = function () {
 
 function cadastrar_form() {
 
+
+    Swal.fire({
+        title: 'Carregando...',
+        text: 'Por favor, aguarde',
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+        }
+    });
+
+
     let atendente = $('#atendente').val().trim();
     let atendido = $('#Atendido').val().trim();
     let servico_executado = $('#servico_executado').val().trim();
@@ -689,7 +700,7 @@ function cadastrar_form() {
                     icon: 'error'
                 });
 
-                console.log(retorno);
+             
             }
         },
 
