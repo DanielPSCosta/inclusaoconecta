@@ -714,6 +714,15 @@ function abrir_login() {
     let login = $('#login').val();
     let senha = $('#senha').val();
 
+    Swal.fire({
+        title: 'Carregando...',
+        text: 'Por favor, aguarde',
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+        }
+    });
+
     $.ajax({
         url: '../PHP/valida_login.php',
         type: 'POST',
@@ -728,6 +737,7 @@ function abrir_login() {
             if (retorno.status) {
 
                 window.location.href = "home.php";
+                Swal.close();
 
             } else {
 
