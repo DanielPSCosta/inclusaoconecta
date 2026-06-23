@@ -162,7 +162,7 @@
     <script src="../js/dados.js"></script>
     <script src="../js/script.js"></script>
 
-
+<!-- 
     <script>
 
         function abrir_login() {
@@ -196,7 +196,7 @@
 
             }
         }
-    </script>
+    </script> -->
 
 </body>
 
