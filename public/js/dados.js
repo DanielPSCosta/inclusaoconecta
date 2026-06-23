@@ -28,19 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function carregarAtendimentos() {
 
-
-
-    Swal.fire({
-        title: 'Carregando...',
-        text: 'Por favor, aguarde',
-        allowOutsideClick: false,
-        didOpen: () => {
-            Swal.showLoading();
-        }
-    });
-
-
-
+    carregando();
+    
     $.ajax({
         url: '../PHP/listar.php',
         type: 'GET',
@@ -74,11 +63,6 @@ function carregarAtendimentos() {
 
 // PDF manual (coloque FORA do DOMContentLoaded)
 window.exportarPDF = function () {
-
-
-
-
-
     $.ajax({
         url: '../PHP/listar.php',
         type: 'GET',
@@ -369,4 +353,17 @@ function formata_data(dados) {
         // Retorna '-' se 'dados' ou 'criado_em' forem nulos ou indefinidos
         return '-';
     }
+}
+
+
+
+function carregando() {
+    Swal.fire({
+        title: 'Carregando...',
+        text: 'Por favor, aguarde',
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+        }
+    });
 }
