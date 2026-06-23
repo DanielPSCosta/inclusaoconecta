@@ -533,14 +533,6 @@ function carregarAtendimentos() {
 window.exportarPDF = function () {
 
 
-    Swal.fire({
-        title: 'Carregando...',
-        text: 'Por favor, aguarde',
-        allowOutsideClick: false,
-        didOpen: () => {
-            Swal.showLoading();
-        }
-    });
 
 
 
@@ -550,6 +542,17 @@ window.exportarPDF = function () {
         dataType: 'json',
 
         success: function (dados) {
+
+            Swal.fire({
+                title: 'Carregando...',
+                text: 'Por favor, aguarde',
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+
+
 
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
