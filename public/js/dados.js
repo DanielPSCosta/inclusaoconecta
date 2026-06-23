@@ -28,8 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function carregarAtendimentos() {
 
-    carregando();
-    
+
+    Swal.fire({
+        title: 'Carregando...',
+        text: 'Por favor, aguarde',
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+        }
+    });
+
+
     $.ajax({
         url: '../PHP/listar.php',
         type: 'GET',
@@ -43,7 +52,7 @@ function carregarAtendimentos() {
             // Adiciona os dados vindos do PHP
             $('#table').bootstrapTable('append', dados);
 
-            swal.close;
+             Swal.close();
 
         },
 
@@ -357,15 +366,3 @@ function formata_data(dados) {
 
 
 
-function carregando() {
-    Swal.fire({
-        title: 'Carregando...',
-        text: 'Por favor, aguarde',
-        allowOutsideClick: false,
-        didOpen: () => {
-            Swal.showLoading();
-        }
-    });
-}
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

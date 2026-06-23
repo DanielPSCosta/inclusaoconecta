@@ -217,7 +217,6 @@
             function pararLeitura() {
                 window.speechSynthesis.cancel();
             }
-
         </script>
 
 
@@ -249,20 +248,23 @@
 
 
     <a class="whatsapp-btn"
-    href="https://wa.me/5511961194875?text=Ol%C3%A1!%20%F0%9F%91%8B%0A%0AGostaria%20de%20receber%20suporte%20da%20Inclus%C3%A3o%20Conecta.%0A%0APoderiam%20me%20orientar%20e%20fornecer%20mais%20informa%C3%A7%C3%B5es%20sobre%20como%20posso%20obter%20ajuda%3F%0A%0AObrigado(a)!"
-    target="_blank"
-    aria-label="Chamar no WhatsApp">
-     <i class="fa fa-whatsapp" aria-hidden="true"></i>
- </a>
+        href="https://wa.me/5511961194875?text=Ol%C3%A1!%20%F0%9F%91%8B%0A%0AGostaria%20de%20receber%20suporte%20da%20Inclus%C3%A3o%20Conecta.%0A%0APoderiam%20me%20orientar%20e%20fornecer%20mais%20informa%C3%A7%C3%B5es%20sobre%20como%20posso%20obter%20ajuda%3F%0A%0AObrigado(a)!"
+        target="_blank"
+        aria-label="Chamar no WhatsApp">
+        <i class="fa fa-whatsapp" aria-hidden="true"></i>
+    </a>
 
     <script src="https://kit.fontawesome.com/775fd40529.js" crossorigin="anonymous"></script>
 
     <script>
-        document.getElementById('formContato').addEventListener('submit', function (event) {
+        document.getElementById('formContato').addEventListener('submit', function(event) {
             event.preventDefault();
             document.getElementById('mensagemSucesso').classList.remove('d-none');
         });
     </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/script.js"></script>
 </body>
