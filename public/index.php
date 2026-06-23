@@ -12,14 +12,14 @@
 
     <link rel="icon" href="../assets/img/logo.png" type="image/png">
     <link rel="apple-touch-icon" href="../assets/img/logo.png">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="../manifest.json">
 
     <meta name="theme-color" content="#000000">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Inclusão Conecta">
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
 
 
 
@@ -47,13 +47,13 @@
                     <li class="nav-item"><a class="nav-link active rounded-pill px-3 py-2 fw-semibold"
                             href="index.php">Início</a></li>
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
-                            href="pages/planos.php">Doações</a></li>
+                            href="../pages/planos.php">Doações</a></li>
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
-                            href="pages/sobre.php">Sobre</a></li>
+                            href="../pages/sobre.php">Sobre</a></li>
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
-                            href="pages/formulario.php">Contato</a></li>
+                            href="../pages/formulario.php">Contato</a></li>
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-3 fw-semibold"
-                            href="pages/login.php">Login</a></li>
+                            href="../pages/login.php">Login</a></li>
 
 
 
@@ -82,8 +82,8 @@
                         </p>
 
                         <!-- <div class="hero-actions">
-                            <a href="pages/formulario.html" class="btn btn-primary btn-lg">Quero ajuda agora</a>
-                            <a href="pages/sobre.html" class="btn btn-light-green btn-lg">Conhecer o projeto</a>
+                            <a href="../pages/formulario.html" class="btn btn-primary btn-lg">Quero ajuda agora</a>
+                            <a href="../pages/sobre.html" class="btn btn-light-green btn-lg">Conhecer o projeto</a>
                         </div> -->
 
                     </div>
@@ -316,11 +316,11 @@
                 <div class="col-md-6">
                     <div
                         class="footer-links d-flex flex-wrap justify-content-center justify-content-md-end align-items-center gap-2">
-                        <a class="text-white-50 text-decoration-none" href="pages/planos.php">Doações</a>
+                        <a class="text-white-50 text-decoration-none" href="../pages/planos.php">Doações</a>
                         <span class="mx-2 text-white-50">•</span>
-                        <a class="text-white-50 text-decoration-none" href="pages/sobre.php">Sobre</a>
+                        <a class="text-white-50 text-decoration-none" href="../pages/sobre.php">Sobre</a>
                         <span class="text-white-50">•</span>
-                        <a class="text-white-50 text-decoration-none" href="pages/formulario.php">Contato</a>
+                        <a class="text-white-50 text-decoration-none" href="../pages/formulario.php">Contato</a>
                     </div>
                 </div>
             </div>
@@ -337,8 +337,8 @@
      <i class="fa fa-whatsapp" aria-hidden="true"></i>
  </a>
     <script src="https://kit.fontawesome.com/775fd40529.js" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
 
 
 
