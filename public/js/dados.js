@@ -111,13 +111,14 @@ window.exportarPDF = function () {
                     ]],
                     body: rows
                 });
-
+                
+                swal.close();
                 const pdfBlob = doc.output('blob');
                 const pdfUrl = URL.createObjectURL(pdfBlob);
 
                 window.open(pdfUrl, '_blank');
             };
-            swal.close();
+
         },
 
         error: function (erro) {
