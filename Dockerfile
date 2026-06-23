@@ -1,13 +1,13 @@
 FROM php:8.3-apache
 
-# Instala dependências + driver do PostgreSQL
+# Instala dependências do sistema + driver PostgreSQL
 RUN apt-get update && apt-get install -y \
     libzip-dev \
     unzip \
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
-    libpq-dev \          # ← Essencial para PostgreSQL
+    libpq-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
     && docker-php-ext-install -j$(nproc) pdo pdo_pgsql pgsql zip gd \
@@ -29,4 +29,5 @@ RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
 
 EXPOSE 80
+
 CMD ["apache2-foreground"]
