@@ -505,7 +505,7 @@ function carregarAtendimentos() {
         error: function (erro) {
             console.log(erro);
         }
-});
+    });
 }
 
 
@@ -683,33 +683,38 @@ function cadastrar_form() {
 
 
 function abrir_login() {
-    // Captura o elemento input pelo ID
-    const meuLogin = document.getElementById('login');
 
-    // Pega o valor contido nele
-    const login = meuLogin.value;
+    let login = $('#login').val();
+    let senha = $('#senha').val();
 
+    $.ajax({
+        url: '../PHP/valida_login.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {
+            login: login,
+            senha: senha
+        },
 
-    // Captura o elemento input pelo ID
-    const minhasenha = document.getElementById('senha');
+        success: function(retorno) {
 
-    // Pega o valor contido nele
-    const senha = minhasenha.value;
+            if (retorno.status) {
 
+                window.location.href = "home.php";
 
+            } else {
 
+                Swal.fire({
+                    title: 'Atenção!',
+                    text: 'Login ou senha inválidos!',
+                    icon: 'error'
+                });
 
-    if (login == 'Daniel' && senha == '123') {
-        window.location.href = "home.html";
-    } else {
+            }
+        },
 
-
-        Swal.fire({
-            title: 'Atenção!',
-            text: 'Favor incluir um login e senha válidos!',
-            icon: 'info',
-            confirmButtonText: 'Cool'
-        })
-
-    }
+        error: function(xhr) {
+            console.log(xhr.responseText);
+        }
+    });
 }
