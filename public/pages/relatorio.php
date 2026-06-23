@@ -91,7 +91,7 @@
                                                 <th data-field="categoria" data-sortable="true">Categoria</th>
                                                 <th data-field="servico" data-sortable="true">Serviço</th>
                                                 <th data-field="duracao" data-sortable="true">Duração</th>
-                                                <th data-field="data_atendimento" data-sortable="true">Data</th>
+                                                <th data-field="data_atendimento" data-sortable="true" data-formatter="formata_data">Data</th>
                                             </tr>
                                         </thead>
                                     </table>
