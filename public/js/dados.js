@@ -52,7 +52,7 @@ function carregarAtendimentos() {
             // Adiciona os dados vindos do PHP
             $('#table').bootstrapTable('append', dados);
 
-             Swal.close();
+            Swal.close();
 
         },
 
@@ -78,6 +78,18 @@ window.exportarPDF = function () {
         dataType: 'json',
 
         success: function (dados) {
+
+
+
+            Swal.fire({
+                title: 'Carregando...',
+                text: 'Por favor, aguarde',
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+
 
             const { jsPDF } = window.jspdf;
             const doc = new jsPDF();
@@ -126,6 +138,8 @@ window.exportarPDF = function () {
 
                 window.open(pdfUrl, '_blank');
             };
+
+            swal.close();
         },
 
         error: function (erro) {
