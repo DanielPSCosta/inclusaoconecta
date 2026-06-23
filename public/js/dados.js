@@ -488,6 +488,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function carregarAtendimentos() {
 
+
+    Swal.fire({
+        title: 'Carregando...',
+        text: 'Por favor, aguarde',
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+        }
+    });
+
+
     $.ajax({
         url: '../PHP/listar.php',
         type: 'GET',
@@ -500,6 +511,8 @@ function carregarAtendimentos() {
 
             // Adiciona os dados vindos do PHP
             $('#table').bootstrapTable('append', dados);
+
+            swal.close();
         },
 
         error: function (erro) {
@@ -518,6 +531,18 @@ function carregarAtendimentos() {
 
 // PDF manual (coloque FORA do DOMContentLoaded)
 window.exportarPDF = function () {
+
+
+    Swal.fire({
+        title: 'Carregando...',
+        text: 'Por favor, aguarde',
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+        }
+    });
+
+
 
     $.ajax({
         url: '../PHP/listar.php',
@@ -573,11 +598,10 @@ window.exportarPDF = function () {
 
                 window.open(pdfUrl, '_blank');
             };
+            swal.close();
         },
 
         error: function (erro) {
-
-            console.log(erro);
 
             Swal.fire({
                 icon: 'error',
@@ -700,7 +724,7 @@ function cadastrar_form() {
                     icon: 'error'
                 });
 
-             
+
             }
         },
 
