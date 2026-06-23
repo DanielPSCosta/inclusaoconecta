@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white bg-opacity-75 border-bottom shadow-sm">
         <div class="container fs-3">
             <a class="navbar-brand fw-bold d-inline-flex align-items-center gap-2 text-decoration-none"
-                href="../public/index.php" aria-label="Página inicial inclusão conecta">
+                href="../index.php" aria-label="Página inicial inclusão conecta">
                 <img class="brand-logo" src="../assets/img/logo.png" alt="Logo inclusão conecta">
                 <span class="brand-text fs-3">
                     Inclusão conecta
@@ -32,7 +32,7 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
-                            href="../public/index.php">Início</a></li>
+                            href="../index.php">Início</a></li>
                     <li class="nav-item"><a class="nav-link active rounded-pill px-3 py-2 fw-semibold"
                             href="planos.php">Doações</a></li>
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
@@ -263,7 +263,7 @@
                     <p>© 2026 inclusão conecta - Inclusão digital com humanidade.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <a class="text-white-50 text-decoration-none" href="../public/index.php">Início</a>
+                    <a class="text-white-50 text-decoration-none" href="../index.php">Início</a>
                     <span class="mx-2 text-white-50">•</span>
                     <a class="text-white-50 text-decoration-none" href="sobre.php">Sobre</a>
                     <span class="mx-2 text-white-50">•</span>
