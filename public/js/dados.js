@@ -477,17 +477,43 @@ document.addEventListener('DOMContentLoaded', () => {
             detailClose: 'bi-dash',
             fullscreen: 'bi-arrows-fullscreen',
             export: 'bi-download'
-        },
-
-        exportTypes: ['xlsx', 'csv', 'excel', 'txt'],
-
-        exportOptions: {
-            fileName: 'atendimentos'
         }
     });
 
-    $('#table').bootstrapTable('append', atendimentos);
+    carregarAtendimentos();
+
 });
+
+
+
+function carregarAtendimentos() {
+
+    $.ajax({
+        url: '../PHP/listar.php',
+        type: 'GET',
+        dataType: 'json',
+
+        success: function (dados) {
+
+            // Limpa a tabela
+            $('#table').bootstrapTable('removeAll');
+
+            // Adiciona os dados vindos do PHP
+            $('#table').bootstrapTable('append', dados);
+        },
+
+        error: function (erro) {
+            console.log(erro);
+        }
+});
+}
+
+
+
+
+
+
+
 
 
 // PDF manual (coloque FORA do DOMContentLoaded)
@@ -645,28 +671,57 @@ function cadastrar_form() {
 
 
 
-    // $.ajax({
-    //     url: 'https://inclusaoconecta.onrender.com/PHP/form.php',
-    //     type: 'POST',
-    //     dataType: 'json',
-    //     data: {
-    //         atendente: $('#atendente').val(),
-    //         Atendido: $('#Atendido').val(),
-    //         servico_executado: $('#servico_executado').val(),
-    //         Duracao: $('#Duracao').val(),
-    //         categoria: $('#categoria').val()
-    //     },
-    //     success: function (retorno) {
-    //         console.log(retorno);
+    $.ajax({
+        url: '../PHP/form.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {
+            atendente: atendente,
+            Atendido: Atendido,
+            servico_executado: servico_executado,
+            Duracao: duracao,
+            categoria: categoria
+        },
 
-    //         if (retorno.status) {
-    //             alert('Registro salvo com sucesso!');
-    //         }
-    //     },
-    //     error: function (erro) {
-    //         console.log(erro);
-    //     }
-    // });
+        success: function (retorno) {
+
+            if (retorno.status) {
+
+                Swal.fire({
+                    title: 'Sucesso!',
+                    text: 'Cadastrado com Sucesso',
+                    icon: 'success'
+                });
+
+                // Limpa os campos
+                $('#atendente').val('');
+                $('#Atendido').val('');
+                $('#servico_executado').val('');
+                $('#Duracao').val('');
+                $('#categoria').val('');
+
+                // Remove validações
+                $('.form-control, .form-select')
+                    .removeClass('is-valid is-invalid');
+
+                // Atualiza a tabela
+                carregarTabela();
+            }
+
+        },
+
+        error: function (xhr, status, error) {
+
+            console.log(xhr.responseText);
+
+            Swal.fire({
+                title: 'Erro',
+                text: 'Não foi possível salvar o registro.',
+                icon: 'error'
+            });
+        }
+    });
+
 
 }
 
