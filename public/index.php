@@ -19,7 +19,7 @@
     <meta name="apple-mobile-web-app-title" content="Inclusão Conecta">
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/">
+    <link rel="stylesheet" href="/css/style.css">
 
 
 
