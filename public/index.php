@@ -10,8 +10,8 @@
     <title>Inclusão conecta</title>
 
 
-    <link rel="icon" href="assets/img/logo.png" type="image/png">
-    <link rel="apple-touch-icon" href="assets/img/logo.png">
+    <link rel="icon" href="../assets/img/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="../assets/img/logo.png">
     <link rel="manifest" href="manifest.json">
 
     <meta name="theme-color" content="#000000">
@@ -31,7 +31,7 @@
         <div class="container fs-3">
             <a class="navbar-brand fw-bold d-inline-flex align-items-center gap-2 text-decoration-none"
                 href="index.html" aria-label="Página inicial Inclusão conecta">
-                <img class="brand-logo" src="assets/img/logo.png" alt="Logo Inclusão conecta">
+                <img class="brand-logo" src="../assets/img/logo.png" alt="Logo Inclusão conecta">
                 <span class="brand-text fs-3">
                     Inclusão conecta
                 </span>
@@ -91,7 +91,7 @@
                     <div class="col-lg-6">
                         <div class="hero-visual mx-auto" aria-hidden="true">
                             <div class="hero-blob"></div>
-                            <img class="hero-mascot" src="assets/img/logo.png"
+                            <img class="hero-mascot" src="../assets/img/logo.png"
                                 alt="Mascote Inclusão conecta">
                         </div>
                     </div>
@@ -309,7 +309,7 @@
             <div class="row align-items-center g-3">
                 <div
                     class="col-md-6 d-flex align-items-center justify-content-center justify-content-md-start gap-3 text-center text-md-start">
-                    <img class="footer-logo flex-shrink-0" src="assets/img/logo.png"
+                    <img class="footer-logo flex-shrink-0" src="../assets/img/logo.png"
                         alt="Logo Inclusão conecta">
                     <p>© 2026 Inclusão conecta - Inclusão digital com humanidade.</p>
                 </div>
