@@ -550,7 +550,9 @@ window.exportarPDF = function () {
                     item.categoria,
                     item.servico,
                     item.duracao,
-                    item.criado_em
+                    item.data_atendimento
+                        ? item.data_atendimento.split('-').reverse().join('/')
+                        : ''
                 ]);
 
                 doc.autoTable({
