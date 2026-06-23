@@ -497,25 +497,12 @@ function carregarAtendimentos() {
 
         success: function (dados) {
 
-
-            Swal.fire({
-                title: 'Carregando...',
-                text: 'Por favor, aguarde',
-                allowOutsideClick: false,
-                didOpen: () => {
-                    Swal.showLoading();
-                }
-            });
-
-
-
             // Limpa a tabela
             $('#table').bootstrapTable('removeAll');
 
             // Adiciona os dados vindos do PHP
             $('#table').bootstrapTable('append', dados);
 
-            swal.close();
         },
 
         error: function (erro) {
