@@ -518,47 +518,72 @@ function carregarAtendimentos() {
 
 // PDF manual (coloque FORA do DOMContentLoaded)
 window.exportarPDF = function () {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
 
-    // Logo
-    const logo = new Image();
-    logo.src = '../assets/img/inclusao_conecta_separado.png'; // caminho da sua imagem
+    $.ajax({
+        url: '../PHP/listar.php',
+        type: 'GET',
+        dataType: 'json',
 
-    logo.onload = function () {
+        success: function (dados) {
 
-        // Adiciona logo
-        doc.addImage(logo, 'PNG', 15, 15, 15, 15);
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
 
-        doc.setFontSize(18);
-        doc.text(
-            "Relatório de Atendimentos",
-            doc.internal.pageSize.getWidth() / 2,
-            25,
-            { align: 'center' }
-        );
+            const logo = new Image();
+            logo.src = '../assets/img/inclusao_conecta_separado.png';
 
-        const rows = atendimentos.map(item => [
-            item.atendente,
-            item.atendido,
-            item.categoria,
-            item.servico,
-            item.duracao,
-            item.data_atendimento
-        ]);
+            logo.onload = function () {
 
-        doc.autoTable({
-            startY: 40, // deixa espaço para o logo
-            head: [['Atendente', 'Atendido', 'Categoria', 'Serviço', 'Duração', 'Data']],
-            body: rows
-        });
+                doc.addImage(logo, 'PNG', 15, 15, 15, 15);
 
-        // doc.save('atendimentos.pdf');
-        const pdfBlob = doc.output('blob');
-        const pdfUrl = URL.createObjectURL(pdfBlob);
+                doc.setFontSize(18);
+                doc.text(
+                    "Relatório de Atendimentos",
+                    doc.internal.pageSize.getWidth() / 2,
+                    25,
+                    { align: 'center' }
+                );
 
-        window.open(pdfUrl, '_blank');
-    };
+                const rows = dados.map(item => [
+                    item.atendente,
+                    item.atendido,
+                    item.categoria,
+                    item.servico,
+                    item.duracao,
+                    item.criado_em
+                ]);
+
+                doc.autoTable({
+                    startY: 40,
+                    head: [[
+                        'Atendente',
+                        'Atendido',
+                        'Categoria',
+                        'Serviço',
+                        'Duração',
+                        'Data'
+                    ]],
+                    body: rows
+                });
+
+                const pdfBlob = doc.output('blob');
+                const pdfUrl = URL.createObjectURL(pdfBlob);
+
+                window.open(pdfUrl, '_blank');
+            };
+        },
+
+        error: function (erro) {
+
+            console.log(erro);
+
+            Swal.fire({
+                icon: 'error',
+                title: 'Erro',
+                text: 'Não foi possível carregar os dados.'
+            });
+        }
+    });
 };
 
 
@@ -696,7 +721,7 @@ function abrir_login() {
             senha: senha
         },
 
-        success: function(retorno) {
+        success: function (retorno) {
 
             if (retorno.status) {
 
@@ -713,7 +738,7 @@ function abrir_login() {
             }
         },
 
-        error: function(xhr) {
+        error: function (xhr) {
             console.log(xhr.responseText);
         }
     });
