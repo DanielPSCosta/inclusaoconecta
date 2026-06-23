@@ -1,15 +1,7 @@
-FROM php:8.2-apache
+FROM php:8.2-cli
 
-# Instala extensões do MySQL
-RUN docker-php-ext-install mysqli pdo pdo_mysql
+WORKDIR /app
 
-# Ativa mod_rewrite (opcional mas recomendado)
-RUN a2enmod rewrite
+COPY . .
 
-# Copia o projeto para o Apache
-COPY . /var/www/html/
-
-# Ajusta permissões
-RUN chown -R www-data:www-data /var/www/html
-
-EXPOSE 80
+CMD php -S 0.0.0.0:$PORT -t public
