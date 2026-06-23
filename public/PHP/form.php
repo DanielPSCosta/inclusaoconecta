@@ -12,18 +12,15 @@ $sql = "INSERT INTO atendimentos
         (atendente, atendido, servico, duracao, categoria)
         VALUES (?, ?, ?, ?, ?)";
 
-$stmt = $conn->prepare($sql);
+$stmt = $pdo->prepare($sql);
 
-$stmt->bind_param(
-    "sssss",
+if ($stmt->execute([
     $atendente,
     $atendido,
     $servico,
     $duracao,
     $categoria
-);
-
-if ($stmt->execute()) {
+])) {
 
     echo json_encode([
         'status' => true

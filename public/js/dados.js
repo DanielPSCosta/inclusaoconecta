@@ -565,111 +565,58 @@ window.exportarPDF = function () {
 
 function cadastrar_form() {
 
-
-    let atendente = $('#atendente').val();
-    let Atendido = $('#Atendido').val();
-    let servico_executado = $('#servico_executado').val();
-    let duracao = $('#Duracao').val();
+    let atendente = $('#atendente').val().trim();
+    let atendido = $('#Atendido').val().trim();
+    let servico_executado = $('#servico_executado').val().trim();
+    let duracao = $('#Duracao').val().trim();
     let categoria = $('#categoria').val();
 
-    if (atendente == '') {
-        $('#atendente').removeClass('is-valid')
-        $('#atendente').addClass('is-invalid')
+    let valido = true;
+
+    // Atendente
+    if (atendente === '') {
+        $('#atendente').removeClass('is-valid').addClass('is-invalid');
+        valido = false;
     } else {
-        $('#atendente').removeClass('is-invalid')
-        $('#atendente').addClass('is-valid')
+        $('#atendente').removeClass('is-invalid').addClass('is-valid');
     }
 
-
-    if (Atendido == '') {
-        $('#Atendido').removeClass('is-valid')
-        $('#Atendido').addClass('is-invalid')
+    // Atendido
+    if (atendido === '') {
+        $('#Atendido').removeClass('is-valid').addClass('is-invalid');
+        valido = false;
     } else {
-        $('#Atendido').removeClass('is-invalid')
-        $('#Atendido').addClass('is-valid')
+        $('#Atendido').removeClass('is-invalid').addClass('is-valid');
     }
 
-
-    if (servico_executado == '') {
-        $('#servico_executado').removeClass('is-valid')
-        $('#servico_executado').addClass('is-invalid')
+    // Serviço
+    if (servico_executado === '') {
+        $('#servico_executado').removeClass('is-valid').addClass('is-invalid');
+        valido = false;
     } else {
-        $('#servico_executado').removeClass('is-invalid')
-        $('#servico_executado').addClass('is-valid')
+        $('#servico_executado').removeClass('is-invalid').addClass('is-valid');
     }
 
-    if (duracao == '') {
-        $('#Duracao').removeClass('is-valid')
-        $('#Duracao').addClass('is-invalid')
+    // Duração
+    if (duracao === '') {
+        $('#Duracao').removeClass('is-valid').addClass('is-invalid');
+        valido = false;
     } else {
-        $('#Duracao').removeClass('is-invalid')
-        $('#Duracao').addClass('is-valid')
+        $('#Duracao').removeClass('is-invalid').addClass('is-valid');
     }
 
-    if (categoria == '') {
-        $('#categoria').removeClass('is-valid')
-        $('#categoria').addClass('is-invalid')
+    // Categoria
+    if (categoria === '') {
+        $('#categoria').removeClass('is-valid').addClass('is-invalid');
+        valido = false;
     } else {
-        $('#categoria').removeClass('is-invalid')
-        $('#categoria').addClass('is-valid')
+        $('#categoria').removeClass('is-invalid').addClass('is-valid');
     }
 
-
-    // Swal.fire({
-    //     title: 'Sucesso!',
-    //     text: 'Cadastrado com Sucesso',
-    //     icon: 'success'
-    // });
-
-
-
-    if (atendente && Atendido &&
-        servico_executado &&
-        duracao &&
-        categoria) {
-
-        Swal.fire({
-            title: 'Sucesso!',
-            text: 'Cadastrado com Sucesso',
-            icon: 'success'
-        });
-
-
-        $('#atendente').val('');
-        $('#Atendido').val('');
-        $('#servico_executado').val('');
-        $('#Duracao').val('');
-        $('#categoria').val('');
-
-        $('#atendente').removeClass('is-invalid');
-        $('#atendente').removeClass('is-valid');
-
-        $('#Atendido').removeClass('is-invalid');
-        $('#Atendido').removeClass('is-valid');
-
-        $('#servico_executado').removeClass('is-invalid');
-        $('#servico_executado').removeClass('is-valid');
-
-        $('#Duracao').removeClass('is-invalid');
-        $('#Duracao').removeClass('is-valid');
-
-        $('#categoria').removeClass('is-invalid');
-        $('#categoria').removeClass('is-valid');
-
-
-
-
-
-
-
+    // Se houver erro, para aqui
+    if (!valido) {
+        return;
     }
-
-
-
-
-
-
-
 
     $.ajax({
         url: '../PHP/form.php',
@@ -677,9 +624,9 @@ function cadastrar_form() {
         dataType: 'json',
         data: {
             atendente: atendente,
-            Atendido: Atendido,
+            atendido: atendido,
             servico_executado: servico_executado,
-            Duracao: duracao,
+            duracao: duracao,
             categoria: categoria
         },
 
@@ -689,7 +636,7 @@ function cadastrar_form() {
 
                 Swal.fire({
                     title: 'Sucesso!',
-                    text: 'Cadastrado com Sucesso',
+                    text: 'Cadastrado com sucesso!',
                     icon: 'success'
                 });
 
@@ -704,26 +651,36 @@ function cadastrar_form() {
                 $('.form-control, .form-select')
                     .removeClass('is-valid is-invalid');
 
-                // Atualiza a tabela
+                // Atualiza tabela
                 carregarTabela();
-            }
 
+            } else {
+
+                Swal.fire({
+                    title: 'Erro',
+                    text: retorno.erro || 'Erro ao cadastrar.',
+                    icon: 'error'
+                });
+
+                console.log(retorno);
+            }
         },
 
-        error: function (xhr, status, error) {
+        error: function (xhr) {
 
-            console.log(xhr.responseText);
+            console.error(xhr.responseText);
 
             Swal.fire({
                 title: 'Erro',
-                text: 'Não foi possível salvar o registro.',
+                text: 'Falha na comunicação com o servidor.',
                 icon: 'error'
             });
         }
     });
-
-
 }
+
+
+
 
 function abrir_login() {
     // Captura o elemento input pelo ID
