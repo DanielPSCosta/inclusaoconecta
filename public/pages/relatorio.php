@@ -151,7 +151,9 @@
         src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.25.0/dist/extensions/export/bootstrap-table-export.min.js"></script>
 
 
-        <script src="https://unpkg.com/bootstrap-table@1.22.6/dist/extensions/mobile/bootstrap-table-mobile.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.22.6/dist/extensions/mobile/bootstrap-table-mobile.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 
