@@ -11,7 +11,7 @@
 
 
     <link rel="icon" href="/assets/img/logo.png" type="image/png">
-    <link rel="apple-touch-icon" href="../assets/img/logo.png">
+    <link rel="apple-touch-icon" href="/assets/img/logo.png">
     <link rel="manifest" href="/manifest.json">
 
     <meta name="theme-color" content="#000000">
@@ -82,8 +82,8 @@
                         </p>
 
                         <!-- <div class="hero-actions">
-                            <a href="../pages/formulario.html" class="btn btn-primary btn-lg">Quero ajuda agora</a>
-                            <a href="../pages/sobre.html" class="btn btn-light-green btn-lg">Conhecer o projeto</a>
+                            <a href="/pages/formulario.html" class="btn btn-primary btn-lg">Quero ajuda agora</a>
+                            <a href="/pages/sobre.html" class="btn btn-light-green btn-lg">Conhecer o projeto</a>
                         </div> -->
 
                     </div>
@@ -309,18 +309,18 @@
             <div class="row align-items-center g-3">
                 <div
                     class="col-md-6 d-flex align-items-center justify-content-center justify-content-md-start gap-3 text-center text-md-start">
-                    <img class="footer-logo flex-shrink-0" src="../assets/img/logo.png"
+                    <img class="footer-logo flex-shrink-0" src="/assets/img/logo.png"
                         alt="Logo Inclusão conecta">
                     <p>© 2026 Inclusão conecta - Inclusão digital com humanidade.</p>
                 </div>
                 <div class="col-md-6">
                     <div
                         class="footer-links d-flex flex-wrap justify-content-center justify-content-md-end align-items-center gap-2">
-                        <a class="text-white-50 text-decoration-none" href="../pages/planos.php">Doações</a>
+                        <a class="text-white-50 text-decoration-none" href="/pages/planos.php">Doações</a>
                         <span class="mx-2 text-white-50">•</span>
-                        <a class="text-white-50 text-decoration-none" href="../pages/sobre.php">Sobre</a>
+                        <a class="text-white-50 text-decoration-none" href="/pages/sobre.php">Sobre</a>
                         <span class="text-white-50">•</span>
-                        <a class="text-white-50 text-decoration-none" href="../pages/formulario.php">Contato</a>
+                        <a class="text-white-50 text-decoration-none" href="/pages/formulario.php">Contato</a>
                     </div>
                 </div>
             </div>
