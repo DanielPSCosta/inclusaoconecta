@@ -632,6 +632,7 @@ function cadastrar_form() {
     let servico_executado = $('#servico_executado').val().trim();
     let duracao = $('#Duracao').val().trim();
     let categoria = $('#categoria').val();
+    let data = $('#data').val();
 
     let valido = true;
 
@@ -675,6 +676,24 @@ function cadastrar_form() {
         $('#categoria').removeClass('is-invalid').addClass('is-valid');
     }
 
+
+
+
+    // Categoria
+    if (data === '') {
+        $('#data').removeClass('is-valid').addClass('is-invalid');
+        valido = false;
+    } else {
+        $('#data').removeClass('is-invalid').addClass('is-valid');
+    }
+
+
+
+
+
+
+
+
     // Se houver erro, para aqui
     if (!valido) {
         return;
@@ -689,7 +708,8 @@ function cadastrar_form() {
             atendido: atendido,
             servico_executado: servico_executado,
             duracao: duracao,
-            categoria: categoria
+            categoria: categoria,
+            data: data
         },
 
         success: function (retorno) {
@@ -708,6 +728,7 @@ function cadastrar_form() {
                 $('#servico_executado').val('');
                 $('#Duracao').val('');
                 $('#categoria').val('');
+                $('#data').val('');
 
                 // Remove validações
                 $('.form-control, .form-select')

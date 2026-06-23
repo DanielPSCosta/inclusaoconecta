@@ -114,6 +114,17 @@
                                                 </div>
                                             </div>
 
+
+                                            <div class="col-md-3 mb-3">
+                                                <label for="data">Data</label>
+                                                <input type="data" class="form-control" id="data">
+                                                <div class="invalid-feedback">
+                                                    Favor preencher o campo Categoria!
+                                                </div>
+                                            </div>
+
+
+
                                         </div>
 
                                         <button class="btn btn-primary" type="button"
