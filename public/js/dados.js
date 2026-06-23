@@ -29,6 +29,18 @@ document.addEventListener('DOMContentLoaded', () => {
 function carregarAtendimentos() {
 
 
+
+    Swal.fire({
+        title: 'Carregando...',
+        text: 'Por favor, aguarde',
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+        }
+    });
+
+
+
     $.ajax({
         url: '../PHP/listar.php',
         type: 'GET',
@@ -41,6 +53,8 @@ function carregarAtendimentos() {
 
             // Adiciona os dados vindos do PHP
             $('#table').bootstrapTable('append', dados);
+
+            swal.close;
 
         },
 
