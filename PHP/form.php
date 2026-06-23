@@ -1,33 +1,37 @@
 <?php
 
-$arquivo = '../js/dados.js';
+require_once 'conexao.php';
 
-$dados = json_decode(file_get_contents($arquivo), true);
+$atendente = $_POST['atendente'];
+$atendido = $_POST['Atendido'];
+$servico = $_POST['servico_executado'];
+$duracao = $_POST['Duracao'];
+$categoria = $_POST['categoria'];
 
-var_dump($dados);
-exit;
+$sql = "INSERT INTO atendimentos
+        (atendente, atendido, servico, duracao, categoria)
+        VALUES (?, ?, ?, ?, ?)";
 
-if (!$dados) {
-    $dados = [];
-}
+$stmt = $conn->prepare($sql);
 
-$novoId = count($dados) + 1;
-
-$dados[] = [
-    'id' => $novoId,
-    'servico' => $_POST['servico_executado'],
-    'categoria' => $_POST['categoria'],
-    'duracao' => $_POST['Duracao'],
-    'disponibilidade' => 'Disponível',
-    'atendente' => $_POST['atendente'],
-    'atendido' => $_POST['Atendido']
-];
-
-file_put_contents(
-    $arquivo,
-    json_encode($dados, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
+$stmt->bind_param(
+    "sssss",
+    $atendente,
+    $atendido,
+    $servico,
+    $duracao,
+    $categoria
 );
 
-echo json_encode([
-    'status' => true
-]);
+if ($stmt->execute()) {
+
+    echo json_encode([
+        'status' => true
+    ]);
+
+} else {
+
+    echo json_encode([
+        'status' => false
+    ]);
+}

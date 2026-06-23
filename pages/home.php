@@ -23,32 +23,45 @@
         <div class="row">
             <div class="col-sm-auto bg-light sticky-top">
                 <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
-                    <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip"
-                        data-bs-placement="right" data-bs-original-title="Icon-only">
+                    <a href="../pages/home.php" class="d-block p-3 link-dark text-decoration-none" title=""
+                        data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
                         <img class="brand-logo" src="../assets/img/logo.png"
                             alt="Logo inclusão conecta">
                     </a>
                     <ul
                         class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
                         <li class="nav-item">
-                            <a href="../pages/dashboard.html" class="nav-link py-3 px-2" title=""
-                                data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                            <a href="../pages/home.php" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                                data-bs-placement="right" data-bs-original-title="Home">
                                 <i class="bi-house fs-1"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="../pages/relatorio.html" class="nav-link py-3 px-2" title=""
-                                data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="relatorio">
-                                <i class="bi-speedometer2 fs-1"></i>
+                            <a href="../pages/cadastro.php" class="nav-link py-3 px-2" title=""
+                                data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                                <i class="bi-clipboard2-data fs-1"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
-                                data-bs-placement="right" data-bs-original-title="Orders">
+                            <a href="../pages/relatorio.php" class="nav-link py-3 px-2" title=""
+                                data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
                                 <i class="bi-table fs-1"></i>
                             </a>
                         </li>
+                        <!-- <li>
+                            <a href="../pages/manuais.php" class="nav-link py-3 px-2" title=""
+                                data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
+                                <i class="bi bi-book "></i>
+                            </a>
+                        </li> -->
+
                         <li>
+                            <a href="../pages/login.php" class="nav-link py-3 px-2 logout" title=""
+                                data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
+                                <i class="bi bi-box-arrow-left fs-1"></i>
+                            </a>
+                        </li>
+                        <!-- <li>
                             <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
                                 data-bs-placement="right" data-bs-original-title="Products">
                                 <i class="bi-heart fs-1"></i>
@@ -58,12 +71,6 @@
                             <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
                                 data-bs-placement="right" data-bs-original-title="Customers">
                                 <i class="bi-people fs-1"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../pages/login.html" class="nav-link py-3 px-2 logout" title=""
-                                data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
-                                <i class="bi bi-box-arrow-left fs-1"></i>
                             </a>
                         </li>
                     </ul>
@@ -78,32 +85,62 @@
                             <li><a class="dropdown-item" href="#">Settings</a></li>
                             <li><a class="dropdown-item" href="#">Profile</a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-sm p-3 min-vh-100">
                 <main class="main-content">
 
-                    <section>
+                    <section class="container">
+
+
+
+                        <div class="d-flex flex-column justify-content-star vh-100">
+                            <div class=" border-0 p-5">
+                                <!-- <h1 class="display-4 fw-bold mb-3"></h1> -->
+                                <h1 class="alert alert-info" role="alert">
+                                    Bem-vindo, Daniel!
+                                </h1>
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <div class="card card text-white bg-primary mb-1">
+                                            <div class="card-body text-center mb-4">
+                                                <h5 class="card-title fs-3">Atendimentos</h5>
+                                                <h1 class="tamanho_letra">120</h1>
+                                                <i class="bi bi-award fs-1"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <div class="card card text-white bg-primary mb-1">
+                                            <div class="card-body text-center mb-4">
+                                                <h5 class="card-title fs-3">Voluntários </h5>
+                                                <h1 class="tamanho_letra">45</h1>
+                                                <i class="bi bi-person-arms-up fs-1"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <div class="card card text-white bg-primary mb-1">
+                                            <div class="card-body text-center mb-4">
+                                                <h5 class="card-title fs-3">Doadores</h5>
+                                                <h1 class="tamanho_letra">20</h1>
+                                                <i class="bi bi-briefcase fs-1"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
 
                     </section>
 
 
-
-
-
-                    <!-- <div vw class="enabled">
-                        <div vw-access-button class="active"></div>
-                        <div vw-plugin-wrapper>
-                            <div class="vw-plugin-top-wrapper"></div>
-                        </div>
-                    </div>
-
-                    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-
-                    <script>
-                        new window.VLibras.Widget('https://vlibras.gov.br/app');
-                    </script> -->
 
 
 
@@ -113,6 +150,16 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
 
 
 

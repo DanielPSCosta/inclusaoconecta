@@ -23,7 +23,7 @@
         <div class="row">
             <div class="col-sm-auto bg-light sticky-top">
                 <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
-                    <a href="../pages/home.html" class="d-block p-3 link-dark text-decoration-none" title=""
+                    <a href="../pages/home.php" class="d-block p-3 link-dark text-decoration-none" title=""
                         data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
                         <img class="brand-logo" src="../assets/img/logo.png"
                             alt="Logo inclusão conecta">
@@ -31,25 +31,25 @@
                     <ul
                         class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
                         <li class="nav-item">
-                            <a href="../pages/home.html" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                            <a href="../pages/home.php" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
                                 data-bs-placement="right" data-bs-original-title="Home">
                                 <i class="bi-house fs-1"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="../pages/cadastro.html" class="nav-link py-3 px-2" title=""
+                            <a href="../pages/cadastro.php" class="nav-link py-3 px-2" title=""
                                 data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
                                 <i class="bi-clipboard2-data  fs-1"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="../pages/relatorio.html" class="nav-link py-3 px-2" title=""
+                            <a href="../pages/relatorio.php" class="nav-link py-3 px-2" title=""
                                 data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
                                 <i class="bi-table fs-1"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="../pages/login.html" class="nav-link py-3 px-2 logout" title=""
+                            <a href="../pages/login.php" class="nav-link py-3 px-2 logout" title=""
                                 data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
                                 <i class="bi bi-box-arrow-left fs-1"></i>
                             </a>

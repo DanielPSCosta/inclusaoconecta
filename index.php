@@ -45,15 +45,15 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 ">
                     <li class="nav-item"><a class="nav-link active rounded-pill px-3 py-2 fw-semibold"
-                            href="index.html">Início</a></li>
+                            href="index.php">Início</a></li>
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
-                            href="pages/planos.html">Doações</a></li>
+                            href="pages/planos.php">Doações</a></li>
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
-                            href="pages/sobre.html">Sobre</a></li>
+                            href="pages/sobre.php">Sobre</a></li>
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-2 fw-semibold"
-                            href="pages/formulario.html">Contato</a></li>
+                            href="pages/formulario.php">Contato</a></li>
                     <li class="nav-item"><a class="nav-link rounded-pill px-3 py-3 fw-semibold"
-                            href="pages/login.html">Login</a></li>
+                            href="pages/login.php">Login</a></li>
 
 
 
@@ -316,11 +316,11 @@
                 <div class="col-md-6">
                     <div
                         class="footer-links d-flex flex-wrap justify-content-center justify-content-md-end align-items-center gap-2">
-                        <a class="text-white-50 text-decoration-none" href="pages/planos.html">Doações</a>
+                        <a class="text-white-50 text-decoration-none" href="pages/planos.php">Doações</a>
                         <span class="mx-2 text-white-50">•</span>
-                        <a class="text-white-50 text-decoration-none" href="pages/sobre.html">Sobre</a>
+                        <a class="text-white-50 text-decoration-none" href="pages/sobre.php">Sobre</a>
                         <span class="text-white-50">•</span>
-                        <a class="text-white-50 text-decoration-none" href="pages/formulario.html">Contato</a>
+                        <a class="text-white-50 text-decoration-none" href="pages/formulario.php">Contato</a>
                     </div>
                 </div>
             </div>
