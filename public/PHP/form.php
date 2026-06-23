@@ -12,7 +12,7 @@ $data_atendimento = $_POST['data'] ?? '';
 
 $sql = "INSERT INTO atendimentos
         (atendente, atendido, servico, duracao, categoria, data_atendimento)
-        VALUES (?, ?, ?, ?, ?)";
+        VALUES (?, ?, ?, ?, ?, ?)";
 
 $stmt = $pdo->prepare($sql);
 
@@ -23,7 +23,7 @@ if ($stmt->execute([
     $duracao,
     $categoria,
     $data_atendimento
-    
+
 ])) {
 
     echo json_encode([
