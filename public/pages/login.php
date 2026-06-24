@@ -120,10 +120,15 @@
                                 <button type="button" class="btn btn-primary btn-lg"
                                     onclick="abrir_login()">Entrar</button>
                                 <p class="small fw-bold mt-2 pt-1 mb-0">Não tem uma conta?
-                                    <a type="button" class="btn btn-primary" data-toggle="modal"
+                                    <a type="button" class="link-danger" data-toggle="modal"
                                         onclick="const modal = new bootstrap.Modal(document.getElementById('modalRegistrar'));modal.show();">
                                         Registrar-se
                                     </a>
+
+
+                                    <!-- <p class="small fw-bold mt-2 pt-1 mb-0">Não tem uma conta?  -->
+                                    <!-- <a href="#!" class="link-danger">Registre-se</a></p> -->
+
                                 </p>
                             </div>
 
