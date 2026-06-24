@@ -32,16 +32,24 @@ if ($senha !== $confirmar_senha) {
 }
 
 
-echo 11;
-exit;
+// echo 11;
+// exit;
 
 
 
 
 try {
 
+
+
+// $sql = "SELECT * FROM atendimentos";
+// $stmt = $pdo->query($sql);
+// $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// header('Content-Type: application/json');
+
+
     $sqlVerifica = "SELECT id FROM usuarios WHERE email = ? LIMIT 1";
-    $stmtVerifica = $pdo->prepare($sqlVerifica);
+    $stmtVerifica = $pdo->query($sqlVerifica);
     $stmtVerifica->execute([$email]);
 
     if ($stmtVerifica->rowCount() > 0) {
@@ -57,7 +65,7 @@ try {
             (nome, email, senha)
             VALUES (?, ?, ?)";
 
-    $stmt = $pdo->prepare($sql);
+    $stmt = $pdo->query($sql);
 
     if ($stmt->execute([
         $nome,
