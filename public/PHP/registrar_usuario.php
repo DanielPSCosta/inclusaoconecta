@@ -49,7 +49,6 @@ try {
         exit;
     }
 
-    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO usuarios
             (nome, email, senha)
@@ -60,7 +59,7 @@ try {
     if ($stmt->execute([
         $nome,
         $email,
-        $senhaHash
+        $senha
     ])) {
 
         echo json_encode([
