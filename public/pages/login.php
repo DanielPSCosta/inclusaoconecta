@@ -119,8 +119,12 @@
                             <div class="text-center text-lg-start mt-4 pt-2">
                                 <button type="button" class="btn btn-primary btn-lg"
                                     onclick="abrir_login()">Entrar</button>
-                                <!-- <p class="small fw-bold mt-2 pt-1 mb-0">Não tem uma conta?  -->
-                                <!-- <a href="#!" class="link-danger">Registre-se</a></p> -->
+                                <p class="small fw-bold mt-2 pt-1 mb-0">Não tem uma conta?
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        onclick="const modal = new bootstrap.Modal(document.getElementById('modalRegistrar'));modal.show();">
+                                        Registrar-se
+                                    </button>
+                                </p>
                             </div>
 
                         </form>
@@ -147,6 +151,70 @@
 
 
 
+
+
+
+
+            <!-- modal -->
+            <div class="modal fade" id="modalRegistrar" tabindex="-1" aria-labelledby="modalRegistrarLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalRegistrarLabel">
+                                Cadastro de Usuário
+                            </h5>
+
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar">
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="nome" name="nome"
+                                    placeholder="Digite seu nome">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Digite seu e-mail">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="senha" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="senha" name="senha"
+                                    placeholder="Digite sua senha">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="confirmar_senha" class="form-label">Confirmar senha</label>
+                                <input type="password" class="form-control" id="confirmar_senha" name="confirmar_senha"
+                                    placeholder="Confirme sua senha">
+                            </div>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                Cancelar
+                            </button>
+
+                            <button type="button" class="btn btn-success" onclick="cadastrarUsuario()">
+                                Cadastrar
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
         </section>
 
 
@@ -164,41 +232,35 @@
     <script src="../js/dados.js"></script>
     <script src="../js/script.js"></script>
 
-    <!-- 
-    <script>
 
-        function abrir_login() {
-            // Captura o elemento input pelo ID
-            const meuLogin = document.getElementById('login');
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-            // Pega o valor contido nele
-            const login = meuLogin.value;
+    <!-- XLSX -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- jsPDF AutoTable -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+
+    <!-- TableExport -->
+    <script src="https://cdn.jsdelivr.net/npm/tableexport.jquery.plugin/tableExport.min.js"></script>
+
+    <!-- Bootstrap Table -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.25.0/dist/bootstrap-table.min.js"></script>
+
+    <!-- PT-BR -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.25.0/dist/locale/bootstrap-table-pt-BR.min.js"></script>
+
+    <!-- Export Extension -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.25.0/dist/extensions/export/bootstrap-table-export.min.js"></script>
 
 
-            // Captura o elemento input pelo ID
-            const minhasenha = document.getElementById('senha');
-
-            // Pega o valor contido nele
-            const senha = minhasenha.value;
-
-
-
-
-            if (login == 'Daniel' && senha == '123') {
-                window.location.href = "home.php";
-            } else {
-
-
-                Swal.fire({
-                    title: 'Atenção!',
-                    text: 'Favor incluir um login e senha válidos!',
-                    icon: 'info',
-                    confirmButtonText: 'Cool'
-                })
-
-            }
-        }
-    </script> -->
+    <script
+        src="https://unpkg.com/bootstrap-table@1.22.6/dist/extensions/mobile/bootstrap-table-mobile.min.js"></script>
 
 </body>
 

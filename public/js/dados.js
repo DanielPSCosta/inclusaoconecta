@@ -437,3 +437,163 @@ duracao.addEventListener('input', function (e) {
     e.target.value = valor;
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Cadastrar login
+function abrirModalRegistro() {
+    const modalElement = document.getElementById('modalRegistrar');
+
+    const modal = new bootstrap.Modal(modalElement);
+    modal.show();
+}
+
+function fecharModalRegistro() {
+    const modalElement = document.getElementById('modalRegistrar');
+
+    const modal = bootstrap.Modal.getInstance(modalElement);
+
+    if (modal) {
+        modal.hide();
+    }
+}
+
+function cadastrarUsuario() {
+    let nome = $('#nome').val().trim();
+    let email = $('#email').val().trim();
+    let senha = $('#senha').val();
+    let confirmarSenha = $('#confirmar_senha').val();
+
+    if (nome === '') {
+        Swal.fire({
+            title: 'Atenção!',
+            text: 'Informe o nome.',
+            icon: 'warning'
+        });
+
+        $('#nome').focus();
+        return;
+    }
+
+    if (email === '') {
+        Swal.fire({
+            title: 'Atenção!',
+            text: 'Informe o e-mail.',
+            icon: 'warning'
+        });
+
+        $('#email').focus();
+        return;
+    }
+
+    if (senha === '') {
+        Swal.fire({
+            title: 'Atenção!',
+            text: 'Informe a senha.',
+            icon: 'warning'
+        });
+
+        $('#senha').focus();
+        return;
+    }
+
+    if (confirmarSenha === '') {
+        Swal.fire({
+            title: 'Atenção!',
+            text: 'Confirme a senha.',
+            icon: 'warning'
+        });
+
+        $('#confirmar_senha').focus();
+        return;
+    }
+
+    if (senha !== confirmarSenha) {
+        Swal.fire({
+            title: 'Atenção!',
+            text: 'As senhas não conferem.',
+            icon: 'error'
+        });
+
+        $('#confirmar_senha').focus();
+        return;
+    }
+
+    $.ajax({
+        url: 'registrar_usuario.php',
+        type: 'POST',
+        dataType: 'json',
+        data: {
+            nome: nome,
+            email: email,
+            senha: senha,
+            confirmar_senha: confirmarSenha
+        },
+
+        beforeSend: function() {
+            Swal.fire({
+                title: 'Aguarde...',
+                text: 'Cadastrando usuário.',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                didOpen: function() {
+                    Swal.showLoading();
+                }
+            });
+        },
+
+        success: function(response) {
+            Swal.close();
+
+            if (response.status === true) {
+                Swal.fire({
+                    title: 'Sucesso!',
+                    text: response.msg || 'Usuário cadastrado com sucesso.',
+                    icon: 'success'
+                }).then(function() {
+                    limparModalRegistro();
+                    fecharModalRegistro();
+                });
+
+            } else {
+                Swal.fire({
+                    title: 'Atenção!',
+                    text: response.msg || 'Erro ao cadastrar usuário.',
+                    icon: 'error'
+                });
+            }
+        },
+
+        error: function() {
+            Swal.close();
+
+            Swal.fire({
+                title: 'Erro!',
+                text: 'Erro na comunicação com o servidor.',
+                icon: 'error'
+            });
+        }
+    });
+}
+
+function limparModalRegistro() {
+    $('#nome').val('');
+    $('#email').val('');
+    $('#senha').val('');
+    $('#confirmar_senha').val('');
+}
+
+
+
+
+
