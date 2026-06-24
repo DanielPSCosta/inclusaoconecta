@@ -94,7 +94,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-6 mb-3">
+                                            <div class="col-md-3 mb-3">
                                                 <label for="Duracao">Duração (minutos)</label>
                                                 <input type="number"
                                                     class="form-control"
@@ -106,7 +106,7 @@
                                                     Favor preencher o campo Duração!
                                                 </div>
                                             </div>
-                                            <div class="col-md-3 mb-3">
+                                            <div class="col-md-6 mb-3">
                                                 <label for="validationServer04">Categoria</label>
                                                 <select class="form-control  " id="categoria" required>
                                                     <option value="">Selecione</option>
