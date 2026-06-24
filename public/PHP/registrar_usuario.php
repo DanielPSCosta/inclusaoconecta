@@ -2,8 +2,6 @@
 
 require_once 'conexao.php';
 
-header('Content-Type: application/json; charset=utf-8');
-
 $nome = trim($_POST['nome'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $senha = $_POST['senha'] ?? '';
