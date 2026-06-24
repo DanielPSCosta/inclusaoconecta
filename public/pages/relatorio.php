@@ -8,6 +8,7 @@
     <title>Doações | Inclusão conecta</title>
 
     <link rel="icon" type="image/png" href="../assets/img/logo.png">
+      <link rel="stylesheet" href="../css/style_home.css">
 
     <link rel="stylesheet" href="../PHP/css.php.php">
 </head>
@@ -121,7 +122,7 @@
 
 
     <script src="../PHP/script.php"></script>
-
+    <script src="../js/dados.js"></script>
 
 </body>
 

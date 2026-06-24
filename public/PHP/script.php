@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/775fd40529.js" crossorigin="anonymous"></script>
 
     <!-- <script src="../js/bootstrap.bundle.min.js"></script> -->
-    <script src="../js/dados.js"></script>
+    <!-- <script src="../js/dados.js"></script> -->
 
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
