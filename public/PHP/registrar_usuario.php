@@ -2,6 +2,8 @@
 
 require_once 'conexao.php';
 
+header('Content-Type: application/json; charset=utf-8');
+
 $nome = trim($_POST['nome'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $senha = $_POST['senha'] ?? '';
@@ -15,14 +17,6 @@ if ($nome == '' || $email == '' || $senha == '' || $confirmar_senha == '') {
     exit;
 }
 
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo json_encode([
-        'status' => false,
-        'msg' => 'E-mail inválido.'
-    ]);
-    exit;
-}
-
 if ($senha !== $confirmar_senha) {
     echo json_encode([
         'status' => false,
@@ -31,28 +25,23 @@ if ($senha !== $confirmar_senha) {
     exit;
 }
 
-
-// echo 11;
-// exit;
-
-
-
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo json_encode([
+        'status' => false,
+        'msg' => 'E-mail inválido.'
+    ]);
+    exit;
+}
 
 try {
 
-
-
-// $sql = "SELECT * FROM atendimentos";
-// $stmt = $pdo->query($sql);
-// $dados = $stmt->fetchAll(PDO::FETCH_ASSOC);
-// header('Content-Type: application/json');
-
-
     $sqlVerifica = "SELECT id FROM usuarios WHERE email = ? LIMIT 1";
-    $stmtVerifica = $pdo->query($sqlVerifica);
+    $stmtVerifica = $pdo->prepare($sqlVerifica);
     $stmtVerifica->execute([$email]);
 
-    if ($stmtVerifica->rowCount() > 0) {
+    $usuarioExiste = $stmtVerifica->fetch(PDO::FETCH_ASSOC);
+
+    if ($usuarioExiste) {
         echo json_encode([
             'status' => false,
             'msg' => 'Este e-mail já está cadastrado.'
@@ -60,17 +49,18 @@ try {
         exit;
     }
 
+    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO usuarios
             (nome, email, senha)
             VALUES (?, ?, ?)";
 
-    $stmt = $pdo->query($sql);
+    $stmt = $pdo->prepare($sql);
 
     if ($stmt->execute([
         $nome,
         $email,
-        $senha
+        $senhaHash
     ])) {
 
         echo json_encode([
@@ -90,6 +80,7 @@ try {
 
     echo json_encode([
         'status' => false,
-        'msg' => 'Erro interno no servidor.'
+        'msg' => 'Erro interno no servidor.',
+        'erro' => $e->getMessage()
     ]);
 }
