@@ -6,8 +6,6 @@ $nome = trim($_POST['nome'] ?? '');
 $email = trim($_POST['email'] ?? '');
 $senha = $_POST['senha'] ?? '';
 $confirmar_senha = $_POST['confirmar_senha'] ?? '';
-echo 1;
-exit;
 
 if ($nome == '' || $email == '' || $senha == '' || $confirmar_senha == '') {
     echo json_encode([
@@ -32,6 +30,13 @@ if ($senha !== $confirmar_senha) {
     ]);
     exit;
 }
+
+
+echo 11;
+exit;
+
+
+
 
 try {
 
