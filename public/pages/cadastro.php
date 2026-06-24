@@ -96,7 +96,7 @@
                                         <div class="row">
                                             <div class="col-md-6 mb-3">
                                                 <label for="validationServer03">Duração</label>
-                                                <input type="text" class="form-control " id="Duracao" required>
+                                                <input type="number" class="form-control " id="Duracao" required>
                                                 <div class="invalid-feedback">
                                                     Favor preencher o campo Duração!
                                                 </div>
