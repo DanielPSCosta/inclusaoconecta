@@ -94,22 +94,19 @@
                                             </div>
                                         </div>
                                         <div class="row">
-
                                             <div class="col-md-3 mb-3">
-                                                <label for="Duracao">Duração</label>
+                                                <label for="Duracao">Duração (HH:MM)</label>
                                                 <input type="text"
                                                     class="form-control"
                                                     id="Duracao"
-                                                    placeholder="01:45"
-                                                    pattern="^\d{1,2}:\d{2}$"
+                                                    maxlength="5"
+                                                    placeholder="00:00"
                                                     required>
-                                                <small class="text-muted">Formato: Horas:Minutos (ex: 2:30)</small>
+
                                                 <div class="invalid-feedback">
-                                                    Favor preencher no formato HH:MM
+                                                    Favor preencher o campo Duração!
                                                 </div>
                                             </div>
-
-
 
                                             <div class="col-md-6 mb-3">
                                                 <label for="validationServer04">Categoria</label>

@@ -412,3 +412,28 @@ function formata_data(dados) {
 
 
 
+
+
+
+
+
+
+
+
+
+const duracao = document.getElementById('Duracao');
+
+duracao.addEventListener('input', function (e) {
+    let valor = e.target.value.replace(/\D/g, '');
+
+    if (valor.length > 4) {
+        valor = valor.substring(0, 4);
+    }
+
+    if (valor.length >= 3) {
+        valor = valor.replace(/(\d{2})(\d{1,2})/, '$1:$2');
+    }
+
+    e.target.value = valor;
+});
+
