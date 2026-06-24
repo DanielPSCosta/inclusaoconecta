@@ -530,7 +530,7 @@ function cadastrarUsuario() {
     }
 
     $.ajax({
-        url: 'registrar_usuario.php',
+        url: '../PHP/registrar_usuario.php',
         type: 'POST',
         dataType: 'json',
         data: {
