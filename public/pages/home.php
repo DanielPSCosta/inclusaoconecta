@@ -98,7 +98,7 @@
                             <div class=" border-0 p-5">
                                 <!-- <h1 class="display-4 fw-bold mb-3"></h1> -->
                                 <h1 class="alert alert-info" role="alert" id="usuarioLogado">
-
+                                    Bem-vindo!
                                 </h1>
 
                                 <div class="row">
@@ -157,13 +157,20 @@
 
 
     <script>
-        const params = new URLSearchParams(window.location.search);
-        const usuario = params.get('usuario');
+        // const params = new URLSearchParams(window.location.search);
+        // const usuario = params.get('usuario');
 
-        if (usuario) {
-            document.getElementById('usuarioLogado').textContent =
-                `Bem-vindo, ${usuario}!`;
-        }
+        // if (usuario) {
+        //     document.getElementById('usuarioLogado').textContent =
+        //         `Bem-vindo, ${usuario}!`;
+        // }
+
+        // buscaFuncionario();
+
+
+
+
+
     </script>
 
 

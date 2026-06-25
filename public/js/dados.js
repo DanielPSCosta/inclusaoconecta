@@ -370,8 +370,8 @@ function abrir_login() {
 
             if (retorno.status) {
 
-                // window.location.href = "home.php";
-                window.location.href = `home.php?usuario=${encodeURIComponent(login)}`;
+                window.location.href = "home.php";
+                // window.location.href = `home.php?usuario=${encodeURIComponent(login)}`;
                 Swal.close();
             } else {
 
