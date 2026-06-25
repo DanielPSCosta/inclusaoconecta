@@ -98,8 +98,8 @@
                         <div class="d-flex flex-column justify-content-star vh-100">
                             <div class=" border-0 p-5">
                                 <!-- <h1 class="display-4 fw-bold mb-3"></h1> -->
-                                <h1 class="alert alert-info" role="alert">
-                                    Bem-vindo, Daniel!
+                                <h1 class="alert alert-info" role="alert" id="usuarioLogado">
+                                   
                                 </h1>
 
                                 <div class="row">
