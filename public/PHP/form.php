@@ -13,7 +13,7 @@ $obs = $_POST['obs'] ?? '';
 
 $sql = "INSERT INTO atendimentos
         (atendente, atendido, servico, duracao, categoria, data_atendimento, obs)
-        VALUES (?, ?, ?, ?, ?, ?)";
+        VALUES (?, ?, ?, ?, ?, ?, ?)";
 
 $stmt = $pdo->prepare($sql);
 

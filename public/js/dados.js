@@ -472,6 +472,7 @@ function fecharModalRegistro() {
     }
 }
 
+// Cadastra usuario
 function cadastrarUsuario() {
     let nome = $('#nome').val().trim();
     let email = $('#email').val().trim();
