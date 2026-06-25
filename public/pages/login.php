@@ -191,7 +191,7 @@
 
                             <div class="mb-3">
                                 <label for="senha" class="form-label">Senha</label>
-                                <input type="password" class="form-control" id="senha" name="senha"
+                                <input type="password" class="form-control" id="senha_modal" name="senha"
                                     placeholder="Digite sua senha">
                             </div>
 
