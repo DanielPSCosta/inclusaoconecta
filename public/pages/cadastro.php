@@ -128,7 +128,7 @@
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-md-12 mb-12">
+                                            <div class="col-md-12 mb-12 mb-3">
                                                 <label for="data">Observação</label>
                                                 <input type="text" class="form-control" id="obs">
                                             </div>
