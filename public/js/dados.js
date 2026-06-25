@@ -477,7 +477,7 @@ function fecharModalRegistro() {
 function cadastrarUsuario() {
     let nome = $('#nome').val().trim();
     let email = $('#email').val().trim();
-    let senha = $('#senha').val();
+    let senha = $('#senha_modal').val();
     let confirmarSenha = $('#confirmar_senha').val();
 
     if (nome === '') {
