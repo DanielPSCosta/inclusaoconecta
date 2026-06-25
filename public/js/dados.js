@@ -365,9 +365,9 @@ function abrir_login() {
 
             if (retorno.status) {
 
-                window.location.href = "home.php";
+                // window.location.href = "home.php";
+                window.location.href = `home.php?usuario=${encodeURIComponent(login)}`;
                 Swal.close();
-                $('#usuarioLogado').text(`Bem-vindo, ${login}!`);
             } else {
 
                 Swal.fire({

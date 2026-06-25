@@ -25,8 +25,7 @@
                 <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
                     <a href="../pages/home.php" class="d-block p-3 link-dark text-decoration-none" title=""
                         data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
-                        <img class="brand-logo" src="../assets/img/logo.png"
-                            alt="Logo inclusão conecta">
+                        <img class="brand-logo" src="../assets/img/logo.png" alt="Logo inclusão conecta">
                     </a>
                     <ul
                         class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
@@ -37,8 +36,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="../pages/cadastro.php" class="nav-link py-3 px-2" title=""
-                                data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                            <a href="../pages/cadastro.php" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                                data-bs-placement="right" data-bs-original-title="Dashboard">
                                 <i class="bi-clipboard2-data fs-1"></i>
                             </a>
                         </li>
@@ -99,7 +98,7 @@
                             <div class=" border-0 p-5">
                                 <!-- <h1 class="display-4 fw-bold mb-3"></h1> -->
                                 <h1 class="alert alert-info" role="alert" id="usuarioLogado">
-                                   
+
                                 </h1>
 
                                 <div class="row">
@@ -157,7 +156,15 @@
 
 
 
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const usuario = params.get('usuario');
 
+        if (usuario) {
+            document.getElementById('usuarioLogado').textContent =
+                `Bem-vindo, ${usuario}!`;
+        }
+    </script>
 
 
 
