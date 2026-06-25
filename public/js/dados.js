@@ -397,22 +397,22 @@ function abrir_login() {
 
 
 
-function formata_data(dados) {
-    console.log(dados);
-    // Verifica se 'dados' existe e se 'criado_em' não é nulo ou indefinido
-    if (dados != null && dados != undefined) {
-        // pega o valor da data e hora e separa em dois
-        const dt = dados.split(" ");
+// function formata_data(dados) {
+//     console.log(dados);
+//     // Verifica se 'dados' existe e se 'criado_em' não é nulo ou indefinido
+//     if (dados != null && dados != undefined) {
+//         // pega o valor da data e hora e separa em dois
+//         const dt = dados.split(" ");
 
-        // separa o valor da data para reordenar
-        const dt_data = dt[0].split("-");
+//         // separa o valor da data para reordenar
+//         const dt_data = dt[0].split("-");
 
-        return dt_data[2] + '/' + dt_data[1] + '/' + dt_data[0];
-    } else {
-        // Retorna '-' se 'dados' ou 'criado_em' forem nulos ou indefinidos
-        return '-';
-    }
-}
+//         return dt_data[2] + '/' + dt_data[1] + '/' + dt_data[0];
+//     } else {
+//         // Retorna '-' se 'dados' ou 'criado_em' forem nulos ou indefinidos
+//         return '-';
+//     }
+// }
 
 
 
