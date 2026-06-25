@@ -149,7 +149,8 @@ window.exportarPDF = function () {
                     item.duracao,
                     item.data_atendimento
                         ? item.data_atendimento.split('-').reverse().join('/')
-                        : ''
+                        : '',
+                    item.obs,
                 ]);
 
                 doc.autoTable({
@@ -160,7 +161,8 @@ window.exportarPDF = function () {
                         'Categoria',
                         'Serviço',
                         'Duração',
-                        'Data'
+                        'Data',
+                        'Observação'
                     ]],
                     body: rows
                 });

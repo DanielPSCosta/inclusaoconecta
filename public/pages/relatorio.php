@@ -92,6 +92,7 @@
                                                 <th data-field="servico" data-sortable="true">Serviço</th>
                                                 <th data-field="duracao" data-sortable="true">Duração</th>
                                                 <th data-field="data_atendimento" data-sortable="true" data-formatter="formata_data">Data</th>
+                                                <th data-field="obs" data-sortable="true">Observação</th>
                                             </tr>
                                         </thead>
                                     </table>
