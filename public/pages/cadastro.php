@@ -95,7 +95,7 @@
                                         <div class="row">
                                             <div class="col-md-3 mb-3">
                                                 <label for="Duracao">Duração (HH:MM)</label>
-                                                <input type="time" class="form-control" id="Duracao" maxlength="5"
+                                                <input type="text" class="form-control" id="Duracao" maxlength="5"
                                                     placeholder="00:00" required>
 
                                                 <div class="invalid-feedback">
