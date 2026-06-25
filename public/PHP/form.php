@@ -8,10 +8,11 @@ $servico = $_POST['servico_executado'] ?? '';
 $duracao = $_POST['duracao'] ?? '';
 $categoria = $_POST['categoria'] ?? '';
 $data_atendimento = $_POST['data'] ?? '';
+$obs = $_POST['obs'] ?? '';
 
 
 $sql = "INSERT INTO atendimentos
-        (atendente, atendido, servico, duracao, categoria, data_atendimento)
+        (atendente, atendido, servico, duracao, categoria, data_atendimento, obs)
         VALUES (?, ?, ?, ?, ?, ?)";
 
 $stmt = $pdo->prepare($sql);
@@ -22,7 +23,8 @@ if ($stmt->execute([
     $servico,
     $duracao,
     $categoria,
-    $data_atendimento
+    $data_atendimento,
+    $obs
 
 ])) {
 

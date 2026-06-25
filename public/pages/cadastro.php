@@ -25,8 +25,7 @@
                 <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
                     <a href="../pages/home.php" class="d-block p-3 link-dark text-decoration-none" title=""
                         data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
-                        <img class="brand-logo" src="../assets/img/logo.png"
-                            alt="Logo inclusão conecta">
+                        <img class="brand-logo" src="../assets/img/logo.png" alt="Logo inclusão conecta">
                     </a>
                     <ul
                         class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
@@ -37,8 +36,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="../pages/cadastro.php" class="nav-link py-3 px-2" title=""
-                                data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                            <a href="../pages/cadastro.php" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                                data-bs-placement="right" data-bs-original-title="Dashboard">
                                 <i class="bi-clipboard2-data  fs-1"></i>
                             </a>
                         </li>
@@ -96,12 +95,8 @@
                                         <div class="row">
                                             <div class="col-md-3 mb-3">
                                                 <label for="Duracao">Duração (HH:MM)</label>
-                                                <input type="text"
-                                                    class="form-control"
-                                                    id="Duracao"
-                                                    maxlength="5"
-                                                    placeholder="00:00"
-                                                    required>
+                                                <input type="text" class="form-control" id="Duracao" maxlength="5"
+                                                    placeholder="00:00" required>
 
                                                 <div class="invalid-feedback">
                                                     Favor preencher o campo Duração!
@@ -130,8 +125,13 @@
                                                 </div>
                                             </div>
 
+                                        </div>
 
-
+                                        <div class="row">
+                                            <div class="col-md-12 mb-12">
+                                                <label for="data">Observação</label>
+                                                <input type="text" class="form-control" id="obs">
+                                            </div>
                                         </div>
 
                                         <button class="btn btn-primary" type="button"

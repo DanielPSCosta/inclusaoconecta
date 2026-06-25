@@ -206,6 +206,7 @@ function cadastrar_form() {
     let duracao = $('#Duracao').val().trim();
     let categoria = $('#categoria').val();
     let data = $('#data').val();
+    let obs = $('#obs').val();
 
     let valido = true;
 
@@ -282,7 +283,8 @@ function cadastrar_form() {
             servico_executado: servico_executado,
             duracao: duracao,
             categoria: categoria,
-            data: data
+            data: data,
+            obs: obs
         },
 
         success: function (retorno) {
@@ -302,6 +304,7 @@ function cadastrar_form() {
                 $('#Duracao').val('');
                 $('#categoria').val('');
                 $('#data').val('');
+                $('#obs').val('');
 
                 // Remove validações
                 $('.form-control, .form-select')
@@ -540,19 +543,19 @@ function cadastrarUsuario() {
             confirmar_senha: confirmarSenha
         },
 
-        beforeSend: function() {
+        beforeSend: function () {
             Swal.fire({
                 title: 'Aguarde...',
                 text: 'Cadastrando usuário.',
                 allowOutsideClick: false,
                 allowEscapeKey: false,
-                didOpen: function() {
+                didOpen: function () {
                     Swal.showLoading();
                 }
             });
         },
 
-        success: function(response) {
+        success: function (response) {
             Swal.close();
 
             if (response.status === true) {
@@ -560,7 +563,7 @@ function cadastrarUsuario() {
                     title: 'Sucesso!',
                     text: response.msg || 'Usuário cadastrado com sucesso.',
                     icon: 'success'
-                }).then(function() {
+                }).then(function () {
                     limparModalRegistro();
                     fecharModalRegistro();
                 });
@@ -574,7 +577,7 @@ function cadastrarUsuario() {
             }
         },
 
-        error: function() {
+        error: function () {
             Swal.close();
 
             Swal.fire({
