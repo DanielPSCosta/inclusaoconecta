@@ -93,7 +93,7 @@
 
                             <!-- Email input -->
                             <div data-mdb-input-init class="form-outline mb-4">
-                                <label class="form-label" for="form3Example3">Email:</label>
+                                <label class="form-label" for="form3Example3">Login:</label>
                                 <input type="email" id="login" class="form-control form-control-lg"
                                     placeholder="Digite seu email" />
                             </div>
@@ -178,7 +178,7 @@
                         <div class="modal-body">
 
                             <div class="mb-3">
-                                <label for="nome" class="form-label">Nome</label>
+                                <label for="nome" class="form-label">Nome/Login</label>
                                 <input type="text" class="form-control" id="nome" name="nome"
                                     placeholder="Digite seu nome">
                             </div>

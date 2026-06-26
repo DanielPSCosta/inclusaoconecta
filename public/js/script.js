@@ -25,7 +25,6 @@ function aplicarFonte() {
     // tamanho = Math.max(12, Math.min(18, tamanho)); // Limites
 
     let maximo = window.innerWidth >= 1024 ? 18 : 24; // Limites
-
     tamanho = Math.max(12, Math.min(maximo, tamanho));
 
 
