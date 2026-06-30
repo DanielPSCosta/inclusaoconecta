@@ -83,7 +83,7 @@
                             <div class="contact-list">
                                 <div class="contact-mini card border-0 p-3">
                                     <strong>WhatsApp</strong>
-                                    <a href="https://wa.me/5511999999999">(11) 99999-9999</a>
+                                    <a href="https://wa.me/5511961194875">(11) 96119-4875</a>
                                 </div>
                                 <div class="contact-mini card border-0 p-3">
                                     <strong>E-mail</strong>
@@ -100,8 +100,7 @@
                     <div class="col-lg-7">
                         <div class="form-card card v-card h-100 border-0 p-4 p-md-5">
                             <span class="eyebrow">Mensagem</span>
-                            <h2 class="mb-3" style="font-weight:950; color:var(--vv-blue); letter-spacing:-.04em;">Conte
-                                o que você precisa</h2>
+                            <h2 class="mb-3" style="font-weight:950; color:var(--vv-blue); letter-spacing:-.04em;">Entre em Contato</h2>
 
 
                             <form id="formContato">
