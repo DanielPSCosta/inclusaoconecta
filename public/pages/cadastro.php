@@ -121,7 +121,7 @@
                                                 <label for="data">Data</label>
                                                 <input type="date" class="form-control" id="data">
                                                 <div class="invalid-feedback">
-                                                    Favor preencher o campo Categoria!
+                                                    Favor preencher o campo Data!
                                                 </div>
                                             </div>
 
