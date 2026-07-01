@@ -191,14 +191,6 @@ window.exportarPDF = function () {
 function cadastrar_form() {
 
 
-    Swal.fire({
-        title: 'Carregando...',
-        text: 'Por favor, aguarde',
-        allowOutsideClick: false,
-        didOpen: () => {
-            Swal.showLoading();
-        }
-    });
 
 
     let atendente = $('#atendente').val().trim();
@@ -274,6 +266,17 @@ function cadastrar_form() {
         Swal.close();
         return;
     }
+
+
+    Swal.fire({
+        title: 'Carregando...',
+        text: 'Por favor, aguarde',
+        allowOutsideClick: false,
+        didOpen: () => {
+            Swal.showLoading();
+        }
+    });
+    
 
     $.ajax({
         url: '../PHP/form.php',
