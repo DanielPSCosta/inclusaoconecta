@@ -30,7 +30,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white bg-opacity-75 border-bottom shadow-sm">
         <div class="container fs-3">
             <a class="navbar-brand fw-bold d-inline-flex align-items-center gap-2 text-decoration-none"
-                href="index.html" aria-label="Página inicial Inclusão conecta">
+                href="index.php" aria-label="Página inicial Inclusão conecta">
                 <img class="brand-logo" src="/assets/img/logo.png" alt="Logo Inclusão conecta">
                 <span class="brand-text fs-3">
                     Inclusão conecta
