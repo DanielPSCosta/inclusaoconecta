@@ -82,7 +82,7 @@
                                         data-locale="pt-BR" data-toolbar="#pdf" data-page-list="[10,25,50,100, All]"
                                         data-search="true" data-show-columns="true" data-show-export="true"
                                         data-export-data-type="all"
-                                        data-export-types='["pdf","xlsx","csv","excel","txt"]'
+                                        data-export-types='["xlsx","csv","excel","txt"]'
                                         class="table  table-striped">
                                         <thead>
                                             <tr>
