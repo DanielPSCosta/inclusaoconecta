@@ -271,6 +271,7 @@ function cadastrar_form() {
 
     // Se houver erro, para aqui
     if (!valido) {
+        Swal.close();
         return;
     }
 
