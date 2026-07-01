@@ -595,7 +595,7 @@ function cadastrarUsuario() {
 function limparModalRegistro() {
     $('#nome').val('');
     $('#email').val('');
-    $('#senha').val('');
+    $('#senha_modal').val('');
     $('#confirmar_senha').val('');
 }
 
