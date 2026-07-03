@@ -381,7 +381,7 @@ function abrir_login() {
                 Swal.fire({
                     title: 'Atenção!',
                     text: 'Login ou senha inválidos!',
-                    icon: 'error'
+                    icon: 'info'
                 });
 
             }
